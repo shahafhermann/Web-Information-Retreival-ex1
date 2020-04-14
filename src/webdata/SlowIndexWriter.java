@@ -1,9 +1,7 @@
 package webdata;
 
-import com.sun.source.tree.Tree;
-
+import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.TreeMap;
 
 /**
@@ -11,7 +9,12 @@ import java.util.TreeMap;
  */
 public class SlowIndexWriter{
 
+    Dictionary tokenIndex;
+    Dictionary productIndex;
     TreeMap<String, TreeMap<Integer, Integer>> tokenDict = new TreeMap<>();
+    TreeMap<String, TreeMap<Integer, Integer>> productDict = new TreeMap<>();
+    ArrayList<String> reviewScore;
+    ArrayList<String> helpfulness;
 
     /**
      * Given product review data, creates an on disk index.
@@ -31,14 +34,14 @@ public class SlowIndexWriter{
 
     }
 
-    public void addToken(String token, int reviewId) {
-        if (!tokenDict.containsKey(token)) {
+    public void addTerm(TreeMap<String, TreeMap<Integer, Integer>> termDict, String token, int reviewId) {
+        if (!termDict.containsKey(token)) {
             TreeMap<Integer, Integer> tokenData = new TreeMap<>();
             tokenData.put(reviewId, 1);
-            tokenDict.put(token, tokenData);
+            termDict.put(token, tokenData);
         }
         else {
-            TreeMap<Integer, Integer> tokenData = tokenDict.get(token);
+            TreeMap<Integer, Integer> tokenData = termDict.get(token);
             Integer lastReview = tokenData.lastKey();
             Integer lastFrequency = tokenData.get(lastReview);
             if (lastReview == reviewId) {
@@ -47,8 +50,9 @@ public class SlowIndexWriter{
             else {
                 tokenData.put(reviewId, 1);
             }
-            tokenDict.replace(token, tokenData);
+            termDict.replace(token, tokenData);
         }
     }
+
 
 }
