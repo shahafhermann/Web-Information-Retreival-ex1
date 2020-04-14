@@ -1,0 +1,900 @@
+product/productId: B001E4KFG0
+review/userId: A3SGXH7AUHU8GW
+review/profileName: delmartian
+review/helpfulness: 1/1
+review/score: 5.0
+review/time: 1303862400
+review/summary: Good Quality Dog Food
+review/text: I have bought several of the Vitality canned dog food products and have found them all to be of good quality. The product looks more like a stew than a processed meat and it smells better. My Labrador is finicky and she appreciates this product better than  most.
+
+product/productId: B00813GRG4
+review/userId: A1D87F6ZCVE5NK
+review/profileName: dll pa
+review/helpfulness: 0/0
+review/score: 1.0
+review/time: 1346976000
+review/summary: Not as Advertised
+review/text: Product arrived labeled as Jumbo Salted Peanuts...the peanuts were actually small sized unsalted. Not sure if this was an error or if the vendor intended to represent the product as "Jumbo".
+
+product/productId: B000LQOCH0
+review/userId: ABXLMWJIXXAIN
+review/profileName: Natalia Corres "Natalia Corres"
+review/helpfulness: 1/1
+review/score: 4.0
+review/time: 1219017600
+review/summary: "Delight" says it all
+review/text: This is a confection that has been around a few centuries.  It is a light, pillowy citrus gelatin with nuts - in this case Filberts. And it is cut into tiny squares and then liberally coated with powdered sugar.  And it is a tiny mouthful of heaven.  Not too chewy, and very flavorful.  I highly recommend this yummy treat.  If you are familiar with the story of C.S. Lewis' "The Lion, The Witch, and The Wardrobe" - this is the treat that seduces Edmund into selling out his Brother and Sisters to the Witch.
+
+product/productId: B000UA0QIQ
+review/userId: A395BORC6FGVXV
+review/profileName: Karl
+review/helpfulness: 3/3
+review/score: 2.0
+review/time: 1307923200
+review/summary: Cough Medicine
+review/text: If you are looking for the secret ingredient in Robitussin I believe I have found it.  I got this in addition to the Root Beer Extract I ordered (which was good) and made some cherry soda.  The flavor is very medicinal.
+
+product/productId: B006K2ZZ7K
+review/userId: A1UQRSCLF8GW1T
+review/profileName: Michael D. Bigham "M. Wassir"
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1350777600
+review/summary: Great taffy
+review/text: Great taffy at a great price.  There was a wide assortment of yummy taffy.  Delivery was very quick.  If your a taffy lover, this is a deal.
+
+product/productId: B006K2ZZ7K
+review/userId: ADT0SRK1MGOEU
+review/profileName: Twoapennything
+review/helpfulness: 0/0
+review/score: 4.0
+review/time: 1342051200
+review/summary: Nice Taffy
+review/text: I got a wild hair for taffy and ordered this five pound bag. The taffy was all very enjoyable with many flavors: watermelon, root beer, melon, peppermint, grape, etc. My only complaint is there was a bit too much red/black licorice-flavored pieces (just not my particular favorites). Between me, my kids, and my husband, this lasted only two weeks! I would recommend this brand of taffy -- it was a delightful treat.
+
+product/productId: B006K2ZZ7K
+review/userId: A1SP2KVKFXXRU1
+review/profileName: David C. Sullivan
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1340150400
+review/summary: Great!  Just as good as the expensive brands!
+review/text: This saltwater taffy had great flavors and was very soft and chewy.  Each candy was individually wrapped well.  None of the candies were stuck together, which did happen in the expensive version, Fralinger's.  Would highly recommend this candy!  I served it at a beach-themed party and everyone loved it!
+
+product/productId: B006K2ZZ7K
+review/userId: A3JRGQVEQN31IQ
+review/profileName: Pamela G. Williams
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1336003200
+review/summary: Wonderful, tasty taffy
+review/text: This taffy is so good.  It is very soft and chewy.  The flavors are amazing.  I would definitely recommend you buying it.  Very satisfying!!
+
+product/productId: B000E7L2R4
+review/userId: A1MZYO9TZK0BBI
+review/profileName: R. James
+review/helpfulness: 1/1
+review/score: 5.0
+review/time: 1322006400
+review/summary: Yay Barley
+review/text: Right now I'm mostly just sprouting this so my cats can eat the grass. They love it. I rotate it around with Wheatgrass and Rye too
+
+product/productId: B00171APVA
+review/userId: A21BT40VZCCYT4
+review/profileName: Carol A. Reed
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1351209600
+review/summary: Healthy Dog Food
+review/text: This is a very healthy dog food. Good for their digestion. Also good for small puppies. My dog eats her required amount at every feeding.
+
+product/productId: B0001PB9FE
+review/userId: A3HDKO7OW0QNK4
+review/profileName: Canadian Fan
+review/helpfulness: 1/1
+review/score: 5.0
+review/time: 1107820800
+review/summary: The Best Hot Sauce in the World
+review/text: I don't know if it's the cactus or the tequila or just the unique combination of ingredients, but the flavour of this hot sauce makes it one of a kind!  We picked up a bottle once on a trip we were on and brought it back home with us and were totally blown away!  When we realized that we simply couldn't find it anywhere in our city we were bummed.<br /><br />Now, because of the magic of the internet, we have a case of the sauce and are ecstatic because of it.<br /><br />If you love hot sauce..I mean really love hot sauce, but don't want a sauce that tastelessly burns your throat, grab a bottle of Tequila Picante Gourmet de Inclan.  Just realize that once you taste it, you will never want to use any other sauce.<br /><br />Thank you for the personal, incredible service!
+
+product/productId: B0009XLVG0
+review/userId: A2725IB4YY9JEB
+review/profileName: A Poeng "SparkyGoHome"
+review/helpfulness: 4/4
+review/score: 5.0
+review/time: 1282867200
+review/summary: My cats LOVE this "diet" food better than their regular food
+review/text: One of my boys needed to lose some weight and the other didn't.  I put this food on the floor for the chubby guy, and the protein-rich, no by-product food up higher where only my skinny boy can jump.  The higher food sits going stale.  They both really go for this food.  And my chubby boy has been losing about an ounce a week.
+
+product/productId: B0009XLVG0
+review/userId: A327PCT23YH90
+review/profileName: LT
+review/helpfulness: 1/1
+review/score: 1.0
+review/time: 1339545600
+review/summary: My Cats Are Not Fans of the New Food
+review/text: My cats have been happily eating Felidae Platinum for more than two years. I just got a new bag and the shape of the food is different. They tried the new food when I first put it in their bowls and now the bowls sit full and the kitties will not touch the food. I've noticed similar reviews related to formula changes in the past. Unfortunately, I now need to find a new food that my cats will eat.
+
+product/productId: B001GVISJM
+review/userId: A18ECVX2RJ7HUE
+review/profileName: willie "roadie"
+review/helpfulness: 2/2
+review/score: 4.0
+review/time: 1288915200
+review/summary: fresh and greasy!
+review/text: good flavor! these came securely packed... they were fresh and delicious! i love these Twizzlers!
+
+product/productId: B001GVISJM
+review/userId: A2MUGFV2TDQ47K
+review/profileName: Lynrie "Oh HELL no"
+review/helpfulness: 4/5
+review/score: 5.0
+review/time: 1268352000
+review/summary: Strawberry Twizzlers - Yummy
+review/text: The Strawberry Twizzlers are my guilty pleasure - yummy. Six pounds will be around for a while with my son and I.
+
+product/productId: B001GVISJM
+review/userId: A1CZX3CP8IKQIJ
+review/profileName: Brian A. Lee
+review/helpfulness: 4/5
+review/score: 5.0
+review/time: 1262044800
+review/summary: Lots of twizzlers, just what you expect.
+review/text: My daughter loves twizzlers and this shipment of six pounds really hit the spot. It's exactly what you would expect...six packages of strawberry twizzlers.
+
+product/productId: B001GVISJM
+review/userId: A3KLWF6WQ5BNYO
+review/profileName: Erica Neathery
+review/helpfulness: 0/0
+review/score: 2.0
+review/time: 1348099200
+review/summary: poor taste
+review/text: I love eating them and they are good for watching TV and looking at movies! It is not too sweet. I like to transfer them to a zip lock baggie so they stay fresh so I can take my time eating them.
+
+product/productId: B001GVISJM
+review/userId: AFKW14U97Z6QO
+review/profileName: Becca
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1345075200
+review/summary: Love it!
+review/text: I am very satisfied with my Twizzler purchase.  I shared these with others and we have all enjoyed them.  I will definitely be ordering more.
+
+product/productId: B001GVISJM
+review/userId: A2A9X58G2GTBLP
+review/profileName: Wolfee1
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1324598400
+review/summary: GREAT SWEET CANDY!
+review/text: Twizzlers, Strawberry my childhood favorite candy, made in Lancaster Pennsylvania by Y & S Candies, Inc. one of the oldest confectionery Firms in the United States, now a Subsidiary of the Hershey Company, the Company was established in 1845 as Young and Smylie, they also make Apple Licorice Twists, Green Color and Blue Raspberry Licorice Twists, I like them all<br /><br />I keep it in a dry cool place because is not recommended it to put it in the fridge. According to the Guinness Book of Records, the longest Licorice Twist ever made measured 1.200 Feet (370 M) and weighted 100 Pounds (45 Kg) and was made by Y & S Candies, Inc. This Record-Breaking Twist became a Guinness World Record on July 19, 1998. This Product is Kosher! Thank You
+
+product/productId: B001GVISJM
+review/userId: A3IV7CL2C13K2U
+review/profileName: Greg
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1318032000
+review/summary: Home delivered twizlers
+review/text: Candy was delivered very fast and was purchased at a reasonable price.  I was home bound and unable to get to a store so this was perfect for me.
+
+product/productId: B001GVISJM
+review/userId: A1WO0KGLPR5PV6
+review/profileName: mom2emma
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1313452800
+review/summary: Always fresh
+review/text: My husband is a Twizzlers addict.  We've bought these many times from Amazon because we're government employees living overseas and can't get them in the country we are assigned to.  They've always been fresh and tasty, packed well and arrive in a timely manner.
+
+product/productId: B001GVISJM
+review/userId: AZOF9E17RGZH8
+review/profileName: Tammy Anderson
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1308960000
+review/summary: TWIZZLERS
+review/text: I bought these for my husband who is currently overseas. He loves these, and apparently his staff likes them also.<br />There are generous amounts of Twizzlers in each 16-ounce bag, and this was well worth the price. <a href="http://www.amazon.com/gp/product/B001GVISJM">Twizzlers, Strawberry, 16-Ounce Bags (Pack of 6)</a>
+
+product/productId: B001GVISJM
+review/userId: ARYVQL4N737A1
+review/profileName: Charles Brown
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1304899200
+review/summary: Delicious product!
+review/text: I can remember buying this candy as a kid and the quality hasn't dropped in all these years. Still a superb product you won't be disappointed with.
+
+product/productId: B001GVISJM
+review/userId: AJ613OLZZUG7V
+review/profileName: Mare's
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1304467200
+review/summary: Twizzlers
+review/text: I love this candy.  After weight watchers I had to cut back but still have a craving for it.
+
+product/productId: B001GVISJM
+review/userId: A22P2J09NJ9HKE
+review/profileName: S. Cabanaugh "jilly pepper"
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1295481600
+review/summary: Please sell these in Mexico!!
+review/text: I have lived out of the US for over 7 yrs now, and I so miss my Twizzlers!!  When I go back to visit or someone visits me, I always stock up.  All I can say is YUM!<br />Sell these in Mexico and you will have a faithful buyer, more often than I'm able to buy them right now.
+
+product/productId: B001GVISJM
+review/userId: A3FONPR03H3PJS
+review/profileName: Deborah S. Linzer "Cat Lady"
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1288310400
+review/summary: Twizzlers - Strawberry
+review/text: Product received is as advertised.<br /><br /><a href="http://www.amazon.com/gp/product/B001GVISJM">Twizzlers, Strawberry, 16-Ounce Bags (Pack of 6)</a>
+
+product/productId: B001GVISJM
+review/userId: A3RXAU2N8KV45G
+review/profileName: lady21
+review/helpfulness: 0/1
+review/score: 1.0
+review/time: 1332633600
+review/summary: Nasty No flavor
+review/text: The candy is just red , No flavor . Just  plan and chewy .  I would never buy them again
+
+product/productId: B001GVISJM
+review/userId: AAAS38B98HMIK
+review/profileName: Heather Dube
+review/helpfulness: 0/1
+review/score: 4.0
+review/time: 1331856000
+review/summary: Great Bargain for the Price
+review/text: I was so glad Amazon carried these batteries.  I have a hard time finding them elsewhere because they are such a unique size.  I need them for my garage door opener.<br />Great deal for the price.
+
+product/productId: B00144C10S
+review/userId: A2F4LZVGFLD1OB
+review/profileName: DaisyH
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1338854400
+review/summary: YUMMY!
+review/text: I got this for my Mum who is not diabetic but needs to watch her sugar intake, and my father who simply chooses to limit unnecessary sugar intake - she's the one with the sweet tooth - they both LOVED these toffees, you would never guess that they're sugar-free and it's so great that you can eat them pretty much guilt free!  i was so impressed that i've ordered some for myself (w dark chocolate) to take to the office so i'll eat them instead of snacking on sugary sweets.<br />These are just EXCELLENT!
+
+product/productId: B0001PB9FY
+review/userId: A3HDKO7OW0QNK4
+review/profileName: Canadian Fan
+review/helpfulness: 1/1
+review/score: 5.0
+review/time: 1107820800
+review/summary: The Best Hot Sauce in the World
+review/text: I don't know if it's the cactus or the tequila or just the unique combination of ingredients, but the flavour of this hot sauce makes it one of a kind!  We picked up a bottle once on a trip we were on and brought it back home with us and were totally blown away!  When we realized that we simply couldn't find it anywhere in our city we were bummed.<br /><br />Now, because of the magic of the internet, we have a case of the sauce and are ecstatic because of it.<br /><br />If you love hot sauce..I mean really love hot sauce, but don't want a sauce that tastelessly burns your throat, grab a bottle of Tequila Picante Gourmet de Inclan.  Just realize that once you taste it, you will never want to use any other sauce.<br /><br />Thank you for the personal, incredible service!
+
+product/productId: B003F6UO7K
+review/userId: AFM0O9480F04W
+review/profileName: Sherril
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1297641600
+review/summary: Great machine!
+review/text: I have never been a huge coffee fan. However, my mother purchased this little machine and talked me into trying the Latte Macciato. No Coffee Shop has a better one and I like most of the other products, too (as a usually non-coffee drinker!).<br />The little Dolche Guesto Machine is super easy to use and prepares a really good Coffee/Latte/Cappuccino/etc in less than a minute (if water is heated up). I would recommend the Dolce Gusto to anyone. Too good for the price and I'am getting one myself! :)
+
+product/productId: B003F6UO7K
+review/userId: A31OQO709M20Y7
+review/profileName: Molly V. Smith "staral"
+review/helpfulness: 0/1
+review/score: 5.0
+review/time: 1288310400
+review/summary: THIS IS MY TASTE...
+review/text: This offer is a great price and a great taste, thanks Amazon for selling this product.<br /><br />Staral
+
+product/productId: B001EO5QW8
+review/userId: AOVROBZ8BNTP7
+review/profileName: S. Potter
+review/helpfulness: 19/19
+review/score: 4.0
+review/time: 1163376000
+review/summary: Best of the Instant Oatmeals
+review/text: McCann's Instant Oatmeal is great if you must have your oatmeal but can only scrape together two or three minutes to prepare it. There is no escaping the fact, however, that even the best instant oatmeal is nowhere near as good as even a store brand of oatmeal requiring stovetop preparation.  Still, the McCann's is as good as it gets for instant oatmeal. It's even better than the organic, all-natural brands I have tried.  All the varieties in the McCann's variety pack taste good.  It can be prepared in the microwave or by adding boiling water so it is convenient in the extreme when time is an issue.<br /><br />McCann's use of actual cane sugar instead of high fructose corn syrup helped me decide to buy this product.  Real sugar tastes better and is not as harmful as the other stuff. One thing I do not like, though, is McCann's use of thickeners.  Oats plus water plus heat should make a creamy, tasty oatmeal without the need for guar gum. But this is a convenience product.  Maybe the guar gum is why, after sitting in the bowl a while, the instant McCann's becomes too thick and gluey.
+
+product/productId: B001EO5QW8
+review/userId: A3PMM0NFVEJGK9
+review/profileName: Megan "Bad at Nicknames"
+review/helpfulness: 13/13
+review/score: 4.0
+review/time: 1166313600
+review/summary: Good Instant
+review/text: This is a good instant oatmeal from the best oatmeal brand.  It uses cane sugar instead of high fructouse corn syrup, so not only does it have a better sweetness, but some doctors now say that this form of sugar is better for you.  Great on a cold morning when you don't have time to make McCann's Steel Cut Oats.  The apple cinnamon is the best but the maple and brown sugar or the regular are good too.  Plus they don't require doctoring to actually tell the three flavors apart.
+
+product/productId: B001EO5QW8
+review/userId: A2EB6OGOWCRU5H
+review/profileName: CorbyJames
+review/helpfulness: 9/9
+review/score: 5.0
+review/time: 1175212800
+review/summary: Great Irish oatmeal for those in a hurry!
+review/text: Instant oatmeal can become soggy the minute the water hits the bowl. McCann's Instant Oatmeal holds its texture, has excellent flavor, and is good for you all at the same time. McCann's regular oat meal is excellent, too, but may take a bit longer to prepare than most have time for in the morning. This is the best instant brand I've ever eaten, and a very close second to the non-instant variety.<br /><br />McCann's Instant Irish Oatmeal, Variety Pack of Regular, Apples & Cinnamon, and Maple & Brown Sugar, 10-Count Boxes (Pack of 6)
+
+product/productId: B001EO5QW8
+review/userId: A2CI0RLADCRKPF
+review/profileName: T. J. Ryan
+review/helpfulness: 3/3
+review/score: 4.0
+review/time: 1210464000
+review/summary: satisfying
+review/text: McCann's Instant Irish Oatmeal, Variety Pack of Regular, Apples & Cinnamon, and Maple & Brown Sugar, 10-Count Boxes (Pack of 6)<br /><br />I'm a fan of the McCann's steel-cut oats, so I thought I'd give the instant variety a try. I found it to be a hardy meal, not too sweet, and great for folks like me (post-bariatric surgery) who need food that is palatable, easily digestible, with fiber but won't make you bloat.
+
+product/productId: B001EO5QW8
+review/userId: A1MYS9LFFBIYKM
+review/profileName: Abby Chase "gluten free"
+review/helpfulness: 2/2
+review/score: 5.0
+review/time: 1190851200
+review/summary: Love Gluten Free Oatmeal!!!
+review/text: For those of us with celiac disease this product is a lifesaver and what could be better than getting it at almost half the price of the grocery or health food store!  I love McCann's instant oatmeal - all flavors!!!<br /><br />Thanks,<br />Abby
+
+product/productId: B001EO5QW8
+review/userId: A3MGP2E1ZZ6GRB
+review/profileName: Zardoz "focuspuller"
+review/helpfulness: 1/1
+review/score: 5.0
+review/time: 1238457600
+review/summary: it's oatmeal
+review/text: What else do you need to know? Oatmeal, instant (make it with a half cup of low-fat milk and add raisins;nuke for 90 seconds). More expensive than Kroger store brand oatmeal and maybe a little tastier or better texture or something. It's still just oatmeal. Mmm, convenient!
+
+product/productId: B001EO5QW8
+review/userId: A2GHZ2UTV2B0CD
+review/profileName: JERRY REITH
+review/helpfulness: 0/0
+review/score: 4.0
+review/time: 1350777600
+review/summary: GOOD WAY TO START THE DAY....
+review/text: I WAS VISITING MY FRIEND NATE THE OTHER MORNING FOR COFFEE , HE CAME OUT OF HIS STORAGE ROOM WITH ( A PACKET OF McCANNS INSTANT IRISH OATMEAL .) HE SUGGESTED THAT I TRY IT FOR MY OWN USE ,IN MY STASH . SOMETIMES NATE DOSE NOT GIVE YOU A CHANCE TO SAY NO , SO I ENDED UP TRYING THE APPLE AND CINN . FOUND IT TO BE VERY TASTEFULL WHEN MADE WITH WATER OR POWDERED MILK . IT GOES GOOD WITH O.J. AND COFFEE AND A SLICE OF TOAST AND YOUR READY TO TAKE ON THE WORLD...OR THE DAY AT LEAST..  JERRY REITH...
+
+product/productId: B001EO5QW8
+review/userId: AO80AC8313NIZ
+review/profileName: kYpondman
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1317168000
+review/summary: Wife's favorite Breakfast
+review/text: I ordered this for my wife as it was reccomended by our daughter.  She has this almost every morning and likes all flavors.  She's happy, I'm happy!!!<br /><a href="http://www.amazon.com/gp/product/B001EO5QW8">McCANN'S Instant Irish Oatmeal, Variety Pack of Regular, Apples & Cinnamon, and Maple & Brown Sugar, 10-Count Boxes (Pack of 6)</a>
+
+product/productId: B001EO5QW8
+review/userId: AQCY5KRO7489S
+review/profileName: Garrett
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1303430400
+review/summary: Why wouldn't you buy oatmeal from Mcanns? Tastes great!
+review/text: The variety packs taste great!<br /><br />I have them every morning. At $0.30 cents per meal, I don't understand why everyone on earth isn't buying this stuff up.<br /><br />Maple and brown sugar is terrific, followed by apples and cinnamon, followed by regular. You don't get tired of the same ole thing, and they taste great.<br /><br />I just boil water from a small pot, empty the packet or 2 in a bowl, pour in boiling water, and watch it expand to 2x its size!<br /><br />Taste really good and takes minutes to prepare.<br /><br />Not sure why everyone on earth isn't this. Convenient, healthy, very quick, excellent quality, and extremely cheap...
+
+product/productId: B001EO5QW8
+review/userId: A1WK4ALVZDYPUE
+review/profileName: Dick Baldwin "christobe"
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1302134400
+review/summary: Oatmeal For Oatmeal Lovers
+review/text: McCann's makes oatmeal for every oatmeal connoisseur, whether one likes it from the raw pellet state that cooks for half an hour, to the sloth addled instant, which can be done in the microwave for under three minutes. It's all good, that's for sure, and the beauty of the instant variety is that it is available in different flavors as well as regular.<br />  This variety pack allows different tastes to be explored, as well as giving you a chance to experience the difference between McCann's and other well-known oatmeals. What I personally like about McCann's is that it cooks up thicker and with more body than the top brand here in America. The Apples & Cinnamon, though, tends to be a little liquidy so you may want to experiment with the amount of water you add. In my 1300watt microwave the oatmeal cooks up in about one minute and twenty-seven seconds, so you should also watch that to get a handle on how much time and water to use.<br />  The only bad thing -- if you can consider it a bad thing -- about this offering is that you have to buy in lot so you'll end up with six ten-count boxes. This is good if you have a whole family of oatmeal-eaters, but if you're a single person alone -- well, love oatmeal.
+
+product/productId: B001EO5QW8
+review/userId: A16XFOYQSJREL7
+review/profileName: Roger Pugliese
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1287014400
+review/summary: Food-Great
+review/text: I have McCann's Oatmeal every morning and by ordering it from Amazon I am able to save almost $3.00 per box.<br />It is a great product. Tastes great and very healthy
+
+product/productId: B001EO5QW8
+review/userId: A17DW6SUOC70DJ
+review/profileName: Mother of 9
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1255392000
+review/summary: Good Hot Breakfast
+review/text: McCann's Oatmeal is a good quality choice.  Our favorite is the Apples and Cinnamon, but we find that none of these are overly sugary.  For a good hot breakfast in 2 minutes, this is excellent.
+
+product/productId: B001EO5QW8
+review/userId: A2G7B7FKP2O2PU
+review/profileName: D. Leschke
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1209686400
+review/summary: Great taste and convenience
+review/text: We really like the McCann's steel cut oats but find we don't cook it up too often.<br />This tastes much better to me than the grocery store brands and is just as convenient.<br />Anything that keeps me eating oatmeal regularly is a good thing.
+
+product/productId: B001EO5QW8
+review/userId: A39Z97950MCTQE
+review/profileName: K. A. Freel
+review/helpfulness: 0/0
+review/score: 3.0
+review/time: 1205193600
+review/summary: Hearty Oatmeal
+review/text: This seems a little more wholesome than some of the supermarket brands, but it is somewhat mushy and doesn't have quite as much flavor either.  It didn't pass muster with my kids, so I probably won't buy it again.
+
+product/productId: B001EO5QW8
+review/userId: AQLL2R1PPR46X
+review/profileName: grumpyrainbow
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1192752000
+review/summary: good
+review/text: Good oatmeal.  I like the apple cinnamon the best.  Though I wouldn't follow the directions on the package since it always comes out too soupy for my taste.  That could just be me since I like my oatmeal really thick to add some milk on top of.
+
+product/productId: B001EO5QW8
+review/userId: A26AY1TFK8BQXQ
+review/profileName: kbogo "shoelover"
+review/helpfulness: 1/2
+review/score: 3.0
+review/time: 1200096000
+review/summary: Mushy
+review/text: The flavors are good.  However, I do not see any differce between this and Oaker Oats brand - they are both mushy.
+
+product/productId: B001EO5QW8
+review/userId: ALOR97KTZTK1P
+review/profileName: knitty pants
+review/helpfulness: 1/2
+review/score: 4.0
+review/time: 1191715200
+review/summary: Very good but next time I won't order the Variety Pack
+review/text: I really like the Maple and Brown Sugar flavor. The regular is fine with brown sugar added. The Apples and Cinnamon flavor is OK. This is a very quick, easy and satisfying breakfast and I'll order this brand again, but not the variety. I'll get all Maple and Brown Sugar.
+
+product/productId: B001EO5QW8
+review/userId: A276999Y6VRSCQ
+review/profileName: JMay
+review/helpfulness: 0/1
+review/score: 3.0
+review/time: 1334016000
+review/summary: Same stuff
+review/text: This is the same stuff you can buy at the big box stores.  There is nothing healthy about it.  It is just carbs and sugars.  Save your money and get something that at least has some taste.
+
+product/productId: B001EO5QW8
+review/userId: A108P30XVUFKXY
+review/profileName: Roberto A
+review/helpfulness: 0/7
+review/score: 1.0
+review/time: 1203379200
+review/summary: Don't like it
+review/text: This oatmeal is not good. Its mushy, soft, I don't like it. Quaker Oats is the way to go.
+
+product/productId: B000G6RPMY
+review/userId: A3S5KJDA6ED2PS
+review/profileName: Mike Kaser
+review/helpfulness: 4/4
+review/score: 5.0
+review/time: 1243900800
+review/summary: HOT!  And good!  Came back for more  :)
+review/text: Got a free package of these with a bottle of bloody mary mix I bought from the seller, and the advertising worked..lol,  I tried them, and shared them with 2 buddies, and we all loved them...  So im here to buy more, and noticed there were no reviews yet,...  well now there is.  They are Hot,  but not "burn your mouth forever hot"  its a nice temp...  Perfect for us..
+
+product/productId: B000G6RPMY
+review/userId: A9L6L5H9BPEBO
+review/profileName: Edwin C. Pauzer
+review/helpfulness: 1/1
+review/score: 4.0
+review/time: 1348876800
+review/summary: You'll go nuts over Ass-Kickin' Peanuts.
+review/text: This wasn't in stock the last time I looked. I had to go to the Vermont Country Store in Weston to find it along with a jaw harp, Cranberry Horseradish Sauce, Fartless Black Bean Salsa, Apple Cider Jelly, Newton's Cradle Art in Motion and the staple Vermont Maple Syrup.<br /><br />Back to the Ass Kickin Peanuts. They are hot. They will activate the perspiration glands behind your ears and under your arms. It requires a beverage as advertised, a glass of very cold milk, and a box of Kleenex since it will make your nose run. They look like ordinary peanuts which is already giving me ideas for work. I suspect that some people have been hitting my goodies in my absence, especially my colleague Greg. I'm going to take this to work at earliest opportunity and empty the contents of this can into an ordinary Planters Peanuts can, and then see whose crying or whose nose is running when I return.<br /><br />The can should be shaken to ensure the spices are evenly distributed. It is important to wash your hands after consumption and not touch the eyes.<br /><br />You'll go nuts over these Ass-Kickin' Peanuts.<br /><br />P.S. I'm not sharing the peanuts, not deliberately, and I'll probably give Greg the jaw harp for Christmas. He'll be so insulted.
+
+product/productId: B000G6RPMY
+review/userId: AQ9DWWYP2KJCQ
+review/profileName: Roel Trevino "protomex"
+review/helpfulness: 0/0
+review/score: 3.0
+review/time: 1278028800
+review/summary: not ass kickin
+review/text: we're used to spicy foods down here in south texas and these are not at all spicy.  doubt very much habanero is used at all.  could take it up a notch or two.
+
+product/productId: B002GWHC0G
+review/userId: A1ND7WC5LXOU48
+review/profileName: David Belton "Proteus 1"
+review/helpfulness: 2/2
+review/score: 4.0
+review/time: 1322438400
+review/summary: Roasts up a smooth brew
+review/text: I roast at home with a stove-top popcorn popper (but I do it outside, of course). These beans (Coffee Bean Direct Green Mexican Altura) seem to be well-suited for this method. The first and second cracks are distinct, and I've roasted the beans from medium to slightly dark with great results every time. The aroma is strong and persistent. The taste is smooth, velvety, yet lively.
+
+product/productId: B002GWHC0G
+review/userId: A2EFAW1P3DRXWO
+review/profileName: TJ Fairfax
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1349395200
+review/summary: Our guests love it!
+review/text: We roast these in a large cast iron pan on the grill (about 1/3 of the bag at a time).  The smell is wonderful and the roasted beans taste delicious too.  More importantly, the coffee is smooth; no bitter aftertaste.  On numerous occasions, we've had to send the roasted beans home with friends because they like it so much.
+
+product/productId: B004N5KULM
+review/userId: A202WR509428VF
+review/profileName: amateur amazon shopper
+review/helpfulness: 2/2
+review/score: 5.0
+review/time: 1322438400
+review/summary: Awesome Deal!
+review/text: Deal was awesome!  Arrived before Halloween as indicated and was enough to satisfy trick or treaters.  I love the quality of this product and it was much less expensive than the local store's candy.
+
+product/productId: B004N5KULM
+review/userId: ASCNNAJU6SXF8
+review/profileName: S. Beck
+review/helpfulness: 1/1
+review/score: 5.0
+review/time: 1336176000
+review/summary: How can you go wrong!
+review/text: It is chocolate, what can I say.  Great variety of everything our family loves.  With a family of six it goes fast here.  Perfect variety.  Kit Kat, Reeses, take five and more.
+
+product/productId: B004N5KULM
+review/userId: A2A7KXM9B4XW90
+review/profileName: P. Kelso "Amazon all the way!"
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1320364800
+review/summary: Awsome - Kids in neighborhood loved us!
+review/text: Great product, nice combination of chocolates and perfect size!  The bags had plenty, and they were shipped promptly.  The kids in the neighborhood liked our candies!
+
+product/productId: B004N5KULM
+review/userId: A2QOGOXPOVKAJG
+review/profileName: mimimc
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1320105600
+review/summary: great deal.
+review/text: Halloween is over but, I sent a bag to my daughters class for her share. The chocolate was fresh and enjoyed by many.
+
+product/productId: B004N5KULM
+review/userId: A1ZR8O62VSU4OK
+review/profileName: Lisa J. Szlosek "lisa"
+review/helpfulness: 2/4
+review/score: 3.0
+review/time: 1318723200
+review/summary: Better price for this at Target
+review/text: Watch your prices with this.  While the assortment was good, and I did get this on a gold box purchase, the price for this was<br />$3-4 less at Target.
+
+product/productId: B004N5KULM
+review/userId: A7ZK2A3VIW7X9
+review/profileName: Peggy
+review/helpfulness: 0/2
+review/score: 5.0
+review/time: 1319414400
+review/summary: pretty expensive
+review/text: This bag of candy online is pretty expensive, it should be cheaper in order to compete with grocery stores, other than that, its a good combination of my favorite candy
+
+product/productId: B001EO5TPM
+review/userId: A1E09XGZUR78C6
+review/profileName: gary sturrock
+review/helpfulness: 2/2
+review/score: 1.0
+review/time: 1215302400
+review/summary: stale product.
+review/text: Arrived in 6 days and were so stale i could not eat any of the 6 bags!!
+
+product/productId: B005DUM9UQ
+review/userId: A3HR0ZZOFKQ97N
+review/profileName: RLC
+review/helpfulness: 3/3
+review/score: 5.0
+review/time: 1333497600
+review/summary: Hammer Nutrition 's Fizz Rocks!
+review/text: I have used the endurolyte product for several years in both pill and powder form.  Long desert rides on the dirt bike always found my camelbak water heavily laced with the endurolyte powder, not overly tasty, but quite effective, as I never got a cramp on these several hundred mile rides.  Same for desert racing in the buggy, the camelbaks were always laced with the powder.  Now we have the Fizz...what a great product!  Firstly, its Hammer's endurolyte product so it's great, endurance athlete's the world over use their products. Second its convenient, handly tablets that dissovle in a fizz.  Third it tastes great! Imagine getting a nice cool drink when your body is starving for hydration and electrolytes and rather than getting a "salty" taste, you get a refreshing lemon-lime or mango!  The camelbaks always get the Fizz now.  I also drop a tablet in my bottled water whenever I exercise and have a nice flavored water chock full of electrolytes. I cannot recommend this product or any hammer product highly enough.
+
+product/productId: B005DUM9UQ
+review/userId: A2XIHNXODNZGV4
+review/profileName: ChemProf "chem professor"
+review/helpfulness: 1/1
+review/score: 5.0
+review/time: 1333584000
+review/summary: great source of electrolytes
+review/text: This product serves me well as a source of electrolytes during and after a long run or bike ride.<br />I have tried all of the flavors but really do like the grapefruit flavor... no after-taste and I actually like the slight carbonation.<br />I use other Hammer products and really like their whole product line.
+
+product/productId: B005DUM9UQ
+review/userId: A3TWF9DQ6MU87E
+review/profileName: dhy4b
+review/helpfulness: 1/1
+review/score: 5.0
+review/time: 1331510400
+review/summary: Great for preventing cramps
+review/text: This stuff really works for preventing cramping during the middle to latter stages of your rides. Pop 1 into each water bottle and you're set. Flavor is fine and goes down easy.
+
+product/productId: B005DUM9UQ
+review/userId: AEFIZIJ1FK1BK
+review/profileName: Doug
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1345161600
+review/summary: Low Carb Alternative to Gatorade
+review/text: For those of us on a low carb diet these little tablets are just the thing.<br /><br />Two years ago I started cycling again after many years but was having heart arrhythmia after longer rides in high heat.  I was drinking plain water but did a little research and thought electrolytes might be the issue.  Gatorade wasn't an option because it is so loaded with carbohydrates so I looked around for a low-carb alternative.  The "zero carb" sports drinks didn't help so what to do?  One day I ran across these at my bike shop so tried a tube of them.....voila!...problem solved!!<br /><br />I've shared them with two friends in particular whose problems with leg cramps were resolved while using these.<br /><br />These guys got it right -- they are superbly formulated and simply work.....
+
+product/productId: B005DUM9UQ
+review/userId: A8OFFIAL6XTOH
+review/profileName: Bill Shirer
+review/helpfulness: 0/1
+review/score: 2.0
+review/time: 1338422400
+review/summary: Taste is not so good.
+review/text: I purchased the Mango flavor, and to me it doesn't take like Mango at all.  There is no hint of sweetness, and unfortunately there is a hint or aftertaste almost like licorice.  I've been consuming various sports nutrition products for decades, so I'm familiar and have come to like the taste of the most of the products I've tried.  The mango flavor is one of the least appealing I've tasted.  It's not terrible, but it's bad enough that I notice the bad taste every sip I take.
+
+product/productId: B000E7VI7S
+review/userId: A1KL2LAW08X6UQ
+review/profileName: calmnsense
+review/helpfulness: 0/0
+review/score: 3.0
+review/time: 1169251200
+review/summary: How much would you pay for a bag of chocolate pretzels?
+review/text: If you're impulsive like me, then $6 is ok. Don't get me wrong, the quality of these babies is very good and I have no complaints. But in retrospect, the price is a little ridiculous (esp. when you add on the shipping).
+
+product/productId: B000E7VI7S
+review/userId: AWCBF2ZWIN57F
+review/profileName: C. Salcido
+review/helpfulness: 0/2
+review/score: 5.0
+review/time: 1185753600
+review/summary: pretzel haven!
+review/text: this was sooooo deliscious but too bad i ate em too fast and gained 2 pds! my fault
+
+product/productId: B001GVISJC
+review/userId: A27TKQHFW0FB5N
+review/profileName: Chet
+review/helpfulness: 2/2
+review/score: 5.0
+review/time: 1254355200
+review/summary: Great Gummi!
+review/text: These Albanese gummi bears and rings and so on are very good and tasty and high quality. The bears even have little faces. At my local candy store this type of gummi stuff (bears, rings, snakes, balls, worms, whatever) are about $10/lb. These twin packs of 4.5 or 5 pound bags is a screaming deal as far as I'm concerned. I'm probably 50 pounds deep in these friggin' things. Consumed!
+
+product/productId: B001GVISJC
+review/userId: A3BDOAPSF96WGQ
+review/profileName: 2tall
+review/helpfulness: 1/1
+review/score: 5.0
+review/time: 1289260800
+review/summary: Bigger then other brands
+review/text: Grape gummy bears are hard to find in my area. In fact pretty much anyone I talk to about grape gummy bears they think I'm lying. So I bought 10lbs... : ) These bears are a little bit bigger then the other brands and have kind of sour kick, but nothing to strong. I love grape flavored candy/soda and these are pretty good. There is another company that makes grape gummy bears that are a little bit better in my opinion, but these are well worth it for the price. I like to use the gummy bears in home made Popsicles with flavored sports drink. The salt in the sports drink makes for softer popsicles, and the gummy bears are awesome frozen. They are delicious!
+
+product/productId: B006SQBRMA
+review/userId: ATYMT48R62ENE
+review/profileName: Marie
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1327017600
+review/summary: Best ever latice tart
+review/text: I ordered two of these and two of raspberry latice tarts directly from FantasiCakes website for a dinner party I was hosting. It arrived fresh and intact. Very good size. I froze half for later use. I am a pastry lover and these were the best I've ever tasted. The pastry was soft, the jam was really good and the taste was great. They were gone in no time. My guests were really impressed.
+
+product/productId: B0059WXJKM
+review/userId: A25VFHVGI4CFTP
+review/profileName: Diana Robinson
+review/helpfulness: 0/1
+review/score: 1.0
+review/time: 1335744000
+review/summary: Warning!  WARNING!  -ALCOHOL SUGARS!
+review/text: Buyer Beware Please! This sweetener is not for everybody.  Maltitol is an alcohol sugar and can be undigestible in the body.  You will know a short time after consuming it if you are one of the unsuspecting many who cannot digest it by the extreme intestinal bloating and cramping and massive amounts of gas a person can experience. Nausea, diarrhea & headaches can also be experienced. I learned my lesson the hard way years ago when I fell in love with the sugar-free chocolates suzanne sommers used to sell.  I thought I'd found sugar-free chocolate nirvana at first taste but the bliss was short lived when the terrible side effects of maltitol kicked in.  The discomfort was unlike anything I had ever felt before.  I blew up like a balloon and had very painful abdominal cramping.  As the symptoms passed, this too was very unpleasant.  Though hard for me to believe a low calorie sweetener could be the culprit, all symptoms were gone when I stopped eating the chocolate. My hunch it had something to do with the maltitol were unfortunately confirmed for me about a year later when I purchased some delicious sugar-free popcorn at my local market.  The taste was amazing and while I was looking at the label wondering what could possibly make this yummy, new sugarfree treat taste so good, my heart sank when I followed the little asterisk next to sugarfree sweetener* down to the very bottom of the label and read "maltitol" in tiny little letters! Thank goodness I'd eaten only a little. I still ended up with all the same side-effects but for a much shorter duration. Some people can use maltitol to their heart's content but others, like me, can have a bad reaction to it. In case you're like me, ... it's not you ...it's the maltitol!
+
+product/productId: B001EPPI84
+review/userId: A3Q0IDQ03S0158
+review/profileName: Jen
+review/helpfulness: 0/0
+review/score: 2.0
+review/time: 1287705600
+review/summary: nothing special
+review/text: It is okay.  I would not go out of my way to buy it again
+
+product/productId: B001EPPI84
+review/userId: A27TZ4WBU7N0YF
+review/profileName: I. So
+review/helpfulness: 0/0
+review/score: 1.0
+review/time: 1275004800
+review/summary: No Tea Flavor
+review/text: No tea flavor at all. Just whole brunch of artifial flavors. It is not returnable. I wasted 20+ bucks.
+
+product/productId: B004X2KR36
+review/userId: A2W3ABLWMJ84NS
+review/profileName: Jessica Snyder
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1348444800
+review/summary: Good
+review/text: These looked like a perfect snack to through in with my trail mix.  Unfortunately, they arrived in a solid mass of melted chocolate.  I left them in my pantry for a few days, and when I opened them at room temperature they were still gooey.  I through them in the fridge and I've been breaking off hunks ever since.  They taste good to me, but the chocolate is all grainy after melting and then solidifying again.  I won't order them online again, but if I see them in a store I would pick them up.
+
+product/productId: B004X2KR36
+review/userId: A26M5O53PHZTKN
+review/profileName: Debs "peanut"
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1348185600
+review/summary: Taste great
+review/text: These taste really good. I have been purchasing a different brand and these are very similar in taste and texture. I agree with the other reviewer regarding ordering in the summer. There is no insulating packaging with ice packs so they will melt in warm weather like all chocolate food items. Order in cold weather and buy enough to last!!!
+
+product/productId: B004X2KR36
+review/userId: A2AB7M9UCNBVN7
+review/profileName: sharonh4
+review/helpfulness: 0/0
+review/score: 3.0
+review/time: 1346976000
+review/summary: Order only in cold weather
+review/text: The taste was great, but the berries had melted.  May order again in winter. If you order in cold weather you should enjoy flavor.
+
+product/productId: B005R8JE8O
+review/userId: A3H1EQD2PBC085
+review/profileName: jmc
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1344902400
+review/summary: this is the best
+review/text: i know i cannot make tea this good.  granted, i am not from the south but i know i have never enjoyed tea that was this sweet without being too sweet.  it tastes crisp.
+
+product/productId: B0066DMI6Y
+review/userId: AB30HQTI5VOLR
+review/profileName: Melinda Bishop
+review/helpfulness: 1/1
+review/score: 5.0
+review/time: 1325116800
+review/summary: Delicious!
+review/text: This peppermint stick is delicious and fun to eat.  My dad got me one for Christmas because he remembered me having a similar one when I was a little girl.  I'm 30 now and I love it!
+
+product/productId: B0066DMI6Y
+review/userId: AZLONLC8OZPEC
+review/profileName: John W. Hollis
+review/helpfulness: 1/1
+review/score: 4.0
+review/time: 1324598400
+review/summary: Great
+review/text: Great gift for all ages! I purchased these giant canes before and the recipients loved them so much, they kept them and would not eat them.
+
+product/productId: B003ZFRKGO
+review/userId: A2VOZX7YBT0D6D
+review/profileName: Johnnycakes "Johnnycakes"
+review/helpfulness: 15/15
+review/score: 5.0
+review/time: 1325635200
+review/summary: Forget Molecular Gastronomy - this stuff rockes a coffee creamer!
+review/text: I know the product title says Molecular Gastronomy, but don't let that scare you off.  I have been looking for this for a while now, not for food science, but for something more down to earth.  I use it to make my own coffee creamer.<br /><br />I have to have my coffee blonde and sweet - but the flavored creamers are full of the bad kinds of fat, and honestly, I hate to use manufactured "food" items.  I really don't think they are good for the body.  On the other hand, I hate using cold milk or cream, because I like HOT coffee.<br /><br />I stumbled across this on Amazon one day and got the idea of making my own creamer.  I also bought low-fat (non-instant) milk powder and regular milk powder. The non-instant lowfat milk is a little sweeter and tastes fresher than regular instant low-fat milk, but does not dissolve good in cold water - which is not a problem for hot coffee.  You will have to play with the ratios - I would not do just the heavy cream, it made the coffee too rich. Also, I think the powder is too expensive to just use on it's own. I like mixing 1/3 of each together.<br /><br />For flavoring, I bough cocoa bean powder, vanilla bean powder, and caster (superfine) sugar.  I mix up small batches along with spices like cinnamon and nutmeg to make my own flavored creamers.  If you wanted, you could use a fake sweetner powder instead.  I make up small amounts that I store in jelly canning jars. I also use my little food chopper/food processor to blend everything, so the sugar is not heavier and sinks to the bottom.  Let it settle for a bit before opening the top though.<br /><br />This stuff tastes WAY better than the storebought creamers and it is fun to experiment and come up with your own flavors.  I am going to try using some essential oils next and see if I can get a good chocolate/orange mix.<br /><br />All of the ingredients I mentioned are here online.  Take the time to experiment.  Maybe you don't use any low-fat milk. Or don't add any flavorings.  It is up to you.  Also, would make great housewarming/host(ess) gifts.<br /><br />I am sure other molecular people will be able to tell you more of what you can do with it, and I am sure I will experiment with it in cooking - but the main reason I bought it was to make my own creamer and it worked out great.
+
+product/productId: B0019CW0HE
+review/userId: A1FD9E5C06UB6B
+review/profileName: BRENDA DEMERS
+review/helpfulness: 5/5
+review/score: 3.0
+review/time: 1301011200
+review/summary: Natural Balance Lamb and Rice
+review/text: While my dogs like all of the flavors that we have tried of this dog food, for some reason their itching increased when I tried the lamb and rice. I have some very itchy dogs and am giving them a limited ingredient dog food to try to help. The duck and sweet potato cut down on the itching significantly, but when we tried lamb and rice they started itching more once again. I like Natural Balance for the quality ingredients.
+
+product/productId: B0019CW0HE
+review/userId: AK2CXHH9VRZ2A
+review/profileName: I. GLENN
+review/helpfulness: 4/4
+review/score: 3.0
+review/time: 1313193600
+review/summary: INCREASED MY DOGS ITCHING
+review/text: Awesome dog food. However, when given to my "Boston", who has severe reactions to some food ingredients; his itching increased to violent jumping out of bed at night, scratching. As soon as I changed to a different formula, the scratching stopped. So glad Natural Balance has other choices. I guess you have to try each, until you find what's best for your pet.
+
+product/productId: B0019CW0HE
+review/userId: A25BGFRHYHEZKK
+review/profileName: Toby's mom
+review/helpfulness: 4/4
+review/score: 5.0
+review/time: 1292889600
+review/summary: Great food!
+review/text: We have three dogs and all of them love this food!  We bought it specifically for one of our dogs who has food allergies and it works great for him, no more hot spots or tummy problems.<br />I LOVE that it ships right to our door with free shipping.
+
+product/productId: B0019CW0HE
+review/userId: A37N9XZBB8JYOF
+review/profileName: Ash52
+review/helpfulness: 1/1
+review/score: 5.0
+review/time: 1333670400
+review/summary: Great for my dogs allergies
+review/text: My dog has a ton of allergies both environmental and food. She was on a prescription dog food before we had her tested to see what allergies she has. After we got the test back, we learned she was allergic to something in the prescription brand. So I finally found this dog food and she has done so well on this! She still has her environmental triggers, but I am happy she can finally eat something I know won't cause her pain.
+
+product/productId: B0019CW0HE
+review/userId: A1T4L0Q47OZ9N
+review/profileName: Wendy
+review/helpfulness: 1/1
+review/score: 5.0
+review/time: 1320883200
+review/summary: Great for stomach problems!
+review/text: My shepherd/collie mix has IBS.  Our vet recommended a limited ingredient food.  This has really helped her symptoms and she likes it.  I will always buy it from Amazon...it's $10 cheaper and free shipping!
+
+product/productId: B0019CW0HE
+review/userId: A3IMXZE9FCUNOC
+review/profileName: Dana
+review/helpfulness: 1/1
+review/score: 5.0
+review/time: 1311638400
+review/summary: Better life for you dog!
+review/text: Natural Balance Dry Dog Food Lamb Meal and Brown Rice Recipe did wonders for my Jack Russell. She has awful food allergy's and this food was our last hope because it was the last food we could find that didn't have SOMETHING in it that she was allergic to. She has no problem eating it dry but normally I mix the Natural Balance Dry Lamb and Brown Rice with the Natural Balance Wet Lamb and Brown Rice.. she seems to like that better. We started feeding it to our other dog (a Bichon) too and she loves it. If your dog has allergy's or stomach issue.. or if you want your dog to eat better food-- this is it! You will see a difference in your pet.
+
+product/productId: B0019CW0HE
+review/userId: A1EC57S6C2VLTL
+review/profileName: Lorraine "Agelechio"
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1347408000
+review/summary: Great Food
+review/text: Great food! I love the idea of one food for all ages & breeds. Ît's a real convenience as well as a really good product.  My 3 dogs eat less, have almost no gas, their poop is regular and a perfect consistency, what else can a mom ask for!!
+
+product/productId: B0019CW0HE
+review/userId: A1OGD72Y2Y26CF
+review/profileName: Lisas201
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1335398400
+review/summary: Great food for my my dog who has a sensitive stomach.
+review/text: I have a standard poodle and pomeranian who both do wonderful on this food. I have switched them to a different food (due to price) a couple of times and end up going right back to natural balance.
+
+product/productId: B0019CW0HE
+review/userId: A7JWCYVPF7KCO
+review/profileName: gare
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1334966400
+review/summary: Great dog food
+review/text: This is great dog food, my dog has severs allergies and this brand is the only one that we can feed him.
+
+product/productId: B0019CW0HE
+review/userId: ABG53EBZBKD23
+review/profileName: J. Romagnoli "*jroma"
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1333929600
+review/summary: Mmmmm  Mmmmm good.
+review/text: This food is great - all ages dogs.  I have a 3 year old and a puppy.  They are both so soft and hardly ever get sick.  The food is good especially when you have Amazon Prime shipping  :)
+
+product/productId: B0019CW0HE
+review/userId: A3AF72GP4GVRY1
+review/profileName: John D. Meara
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1330041600
+review/summary: Great Dog Food!
+review/text: My golden retriever is one of the most picky dogs I've ever met.  After experimenting with various types of food, I have found she loves natural balance.  What I really like about natural balance is the fact that it has multiple flavors in dry and wet varieties.  I mix her dry food with a little wet food and my golden loves it.  Furthermore, I do like mixing up the flavors each time as I think the same meal day over day might get a little boring, so I figured why not.  I tend to stay away from the fish type though as it smells...<br /><br />Additionally, I started purchasing off Amazon because Petco didn't have the wet food box and only had a couple of cans.  I came home and to my surprise realized that I could save $20 each time I bought dog food if I just buy it off Amazon.<br /><br />All in all, I definitely recommend and give my stamp of approval to natural balance dog food.  While I have never eaten it, my dog seems to love it.
+
+product/productId: B0019CW0HE
+review/userId: A1DJAAKLPCJRZD
+review/profileName: wendy
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1329609600
+review/summary: So convenient
+review/text: This is the same food we get at pet store. But it's delivered to my door! And for the same price or slightly less.
+
+product/productId: B0019CW0HE
+review/userId: A1BFNM27629VAV
+review/profileName: E. Triebe
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1320105600
+review/summary: Good healthy dog food
+review/text: I've been very pleased with the Natural Balance dog food. Our dogs have had issues with other dog foods in the past and I had someone recommend Natural Balance grain free since it is possible they were allergic to grains. Since switching I haven't had any issues. It is also helpful that have have different kibble size for larger/smaller sized dogs.
+
+product/productId: B0019CW0HE
+review/userId: A18AAABCIJKC5Q
+review/profileName: Rhiever
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1303776000
+review/summary: Great dog food
+review/text: My 1-1/2 year old basenji/jack russell mix loves this dog food. He's been noticeably healthier and more energetic since I switched him over from the standard dog foods earlier this year. Despite the higher cost of natural dog foods, I find that he eats significantly less of the Natural Balance dog foods and still stays happy and full. On the normal dog foods, he'd eat up to 3 cups of dog food a day (the recommended serving for his size), whereas he only eats about 1 cup to 1-1/2 cup of the Natural Balance dog food a day. When you take this into account, you're actually getting more "bang for your buck" with the natural dog foods since you don't have to buy as much to last just as long as the normal dog foods... and a healthier, happier dog, to boot! Add in the fact that you can get free, 2-day shipping with Amazon Prime... I'm sold!!
+
+product/productId: B0019CW0HE
+review/userId: A3UII2114114PI
+review/profileName: FuNky Faja "SiLkk"
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1297296000
+review/summary: Great allergy sensitive dog food, dogs love it
+review/text: Our pup has experienced allergies in forms of hotspots and itching from other dog foods. The cheap 'you can buy it anywhere' food not only have crazy preservatives in them but can cause health problems for your pets.  This food works wonders on reducing allergies and our dog loves the food.<br />This message is RAMSEY FrAnkenSteiN approved.
+
+product/productId: B0019CW0HE
+review/userId: ABZ9F0D94YK45
+review/profileName: Amazon-tron 3000
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1295308800
+review/summary: Perfect for our English Bulldog with Allergies
+review/text: My English Bulldog had skin allergies the summer we got him at age 3.  The vet recommended we wean him off the food his previous owner gave him (Iams Lamb and Rice) and onto a new kind.  This was the second one we tried, and it has been working ever since.  It's for dogs that need a limited diet who can be sensitive to additives and proteins commonly found in commercial dog food (like chicken or beef).
+
+product/productId: B0019CW0HE
+review/userId: A2P6ACFZ8FTNVV
+review/profileName: Melissa Benjamin
+review/helpfulness: 0/1
+review/score: 1.0
+review/time: 1331164800
+review/summary: Bad
+review/text: I fed this to my Golden Retriever and he hated it.  He wouldn't eat it, and when he did, it gave him terrible diarrhea.  We will not be buying this again.  It's also super expensive.
+
