@@ -61,6 +61,7 @@ public class Dictionary implements Serializable {
             postingPtr[i] = encodePostingList(termData, term);
 
             length[i] = (byte) term.length();
+            prevTerm = term;
             ++i;
         }
     }
@@ -87,10 +88,12 @@ public class Dictionary implements Serializable {
 
 
     private int binarySearch(int left, int right, String term) {
-        if (right >= left) {
-            if (right - left == 1) {
-                rangeSearch(left, term);
-            }
+        if (right == left) {
+            if (term.equals(concatStr.substring(termPtr[left], length[left * 100])))
+                return left;  // TODO: What do we return?
+            rangeSearch(left, term);
+        }
+        if (right > left) {
             int mid = left + (right - left) / 2;
 
 
@@ -102,11 +105,16 @@ public class Dictionary implements Serializable {
             // If element is smaller than mid, then
             // it can only be present in left subarray
             if (term.compareTo(concatStr.substring(termPtr[mid], length[mid * 100])) < 0)
-                return binarySearch(left, mid, term);  // TODO: mid - 1?
+                return binarySearch(left, mid - 1, term);  // TODO: mid - 1?
 
             // Else the element can only be present
             // in right subarray
-            return binarySearch(mid, right, term);  // TODO: mid + 1?
+            if (term.compareTo(concatStr.substring(termPtr[mid + 1], length[(mid + 1) * 100])) < 0) {
+                return binarySearch(mid, mid, term);  // TODO: What do we return? {
+            }
+
+            return binarySearch(mid + 1, right, term);  // TODO: mid + 1?
+
         }
 
         // We reach here when element is not present
@@ -114,27 +122,29 @@ public class Dictionary implements Serializable {
         return -1;  // TODO: Return what?
     }
 
-    private void rangeSearch(int left, String term) {
+    String rangeSearch(int left, String term) {
         int basePtr = termPtr[left];
         int i = left * 100 ;
         String prevTerm = concatStr.substring(basePtr, basePtr + length[i]);
         basePtr += length[i];
 
         String curr;
+        // Set the bound to fit the number of terms in the current block (starts at index left)
+        int bound = ((left == termPtr.length - 1) && (length.length - i < 100)) ?  length.length - i : i + 100;
         ++i;
-        while (i < i + 100) {
+        while (i < bound) {
             curr = concatStr.substring(basePtr, basePtr + length[i] - prefixSize[i]);
             String prefix = prevTerm.substring(0, prefixSize[i]);
             curr = prefix.concat(curr);
             if (term.equals(curr)) {
-                return;  // TODO: ??
+                return curr;  // TODO: ??
             }
 
             prevTerm = curr;
-            basePtr += length[i];
+            basePtr += length[i] - prefixSize[i];
             ++i;
         }
-        return;  // TODO: ??
+        return "FAIL! YOU GUYS SUCK!";  // TODO: ??
     }
 
 

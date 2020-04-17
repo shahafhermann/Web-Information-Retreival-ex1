@@ -19,8 +19,9 @@ public class SlowIndexWriter{
     Dictionary productIndex;
     TreeMap<String, TreeMap<Integer, Integer>> tokenDict = new TreeMap<>();
     TreeMap<String, TreeMap<Integer, Integer>> productDict = new TreeMap<>();
-    ArrayList<String> reviewScore;
-    ArrayList<String> reviewHelpfulness;
+    ArrayList<String> reviewScore = new ArrayList<>();
+    ArrayList<String> reviewHelpfulness = new ArrayList<>();
+    ArrayList<String> reviewId = new ArrayList<>();
     int numOfReviews = 0;
 
     /**
@@ -62,22 +63,22 @@ public class SlowIndexWriter{
     }
 
     private void breakText(String text, int reviewId) {
-        String[] tokens = text.split("[^A-Za-z0-9]");
+        String[] tokens = text.split("[^A-Za-z0-9]+");
         for (String token: tokens) {
             addTerm(tokenDict, token, reviewId);
         }
     }
 
-    private void parseFile(String inputFile) {
+    void parseFile(String inputFile) {
         try (BufferedReader reader = new BufferedReader(new FileReader(new File(inputFile)))){
             String line = reader.readLine();
-            while (line != null){  // TODO: How to separate reviews
+            while (line != null){
                 Matcher term;
-                ++numOfReviews;  // TODO: add a condition
-
 
                 term = Pattern.compile("^product/productId: (.*)").matcher(line);
                 if (term.find()) {
+                    ++numOfReviews;
+                    reviewId.add(term.group(1));
                     addTerm(productDict, term.group(1), numOfReviews);
                     line = reader.readLine();
                     continue;
@@ -99,7 +100,7 @@ public class SlowIndexWriter{
 
                 term = Pattern.compile("^review/text: (.*)").matcher(line);  // TODO: What happens when there's a \n
                 if (term.find()) {
-                    breakText(term.group(1), numOfReviews);
+                    breakText(term.group(1).toLowerCase(), numOfReviews);
                     line = reader.readLine();
                     continue;
                 }
@@ -110,11 +111,4 @@ public class SlowIndexWriter{
             System.err.println(e.getMessage());
         }
     }
-
-    public static void main(String[] args) {
-
-        parseFile("/Users/shahaf/Documents/UNI/אחזור מידע באינטרנט/ex1/100.txt");
-    }
-
-
 }
