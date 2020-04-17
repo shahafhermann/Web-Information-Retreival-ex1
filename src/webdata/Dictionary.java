@@ -9,7 +9,7 @@ public class Dictionary implements Serializable {
     private static final int K = 100;
     boolean isProduct;
 
-    private String concatStr = "";
+    String concatStr = "";
     private int[] frequency;
     private long[] postingPtr;
     private byte[] length;
@@ -82,16 +82,16 @@ public class Dictionary implements Serializable {
         return (byte)minLength;
     }
 
-    public void searchTerm(String term) {
-        binarySearch(0, termPtr.length - 1, term);
+    public int searchTerm(String term) {
+        return binarySearch(0, termPtr.length - 1, term);
     }
 
 
     private int binarySearch(int left, int right, String term) {
         if (right == left) {
-            if (term.equals(concatStr.substring(termPtr[left], length[left * 100])))
+            if (term.equals(concatStr.substring(termPtr[left], termPtr[left] + length[left * 100])))
                 return left;  // TODO: What do we return?
-            rangeSearch(left, term);
+            return rangeSearch(left, term);
         }
         if (right > left) {
             int mid = left + (right - left) / 2;
@@ -99,21 +99,21 @@ public class Dictionary implements Serializable {
 
             // If the element is present at the
             // middle itself
-            if (term.equals(concatStr.substring(termPtr[mid], length[mid * 100])))
+            if (term.equals(concatStr.substring(termPtr[mid], termPtr[mid] + length[mid * 100])))
                 return mid;  // TODO: What do we return?
 
             // If element is smaller than mid, then
             // it can only be present in left subarray
-            if (term.compareTo(concatStr.substring(termPtr[mid], length[mid * 100])) < 0)
-                return binarySearch(left, mid - 1, term);  // TODO: mid - 1?
+            if (term.compareTo(concatStr.substring(termPtr[mid], termPtr[mid] + length[mid * 100])) < 0)
+                return binarySearch(left, mid - 1, term);
 
             // Else the element can only be present
             // in right subarray
-            if (term.compareTo(concatStr.substring(termPtr[mid + 1], length[(mid + 1) * 100])) < 0) {
-                return binarySearch(mid, mid, term);  // TODO: What do we return? {
+            if (term.compareTo(concatStr.substring(termPtr[mid + 1], termPtr[mid + 1] + length[(mid + 1) * 100])) < 0) {
+                return binarySearch(mid, mid, term);  // TODO: What do we return?
             }
 
-            return binarySearch(mid + 1, right, term);  // TODO: mid + 1?
+            return binarySearch(mid + 1, right, term);
 
         }
 
@@ -122,7 +122,7 @@ public class Dictionary implements Serializable {
         return -1;  // TODO: Return what?
     }
 
-    String rangeSearch(int left, String term) {
+    private int rangeSearch(int left, String term) {
         int basePtr = termPtr[left];
         int i = left * 100 ;
         String prevTerm = concatStr.substring(basePtr, basePtr + length[i]);
@@ -137,14 +137,14 @@ public class Dictionary implements Serializable {
             String prefix = prevTerm.substring(0, prefixSize[i]);
             curr = prefix.concat(curr);
             if (term.equals(curr)) {
-                return curr;  // TODO: ??
+                return 0;  // TODO: ??
             }
 
             prevTerm = curr;
             basePtr += length[i] - prefixSize[i];
             ++i;
         }
-        return "FAIL! YOU GUYS SUCK!";  // TODO: ??
+        return -1;  // TODO: ??
     }
 
 

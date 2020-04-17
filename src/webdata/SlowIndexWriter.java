@@ -65,18 +65,34 @@ public class SlowIndexWriter{
     private void breakText(String text, int reviewId) {
         String[] tokens = text.split("[^A-Za-z0-9]+");
         for (String token: tokens) {
-            addTerm(tokenDict, token, reviewId);
+            if (!token.isEmpty()) {
+                addTerm(tokenDict, token, reviewId);
+            }
         }
     }
 
     void parseFile(String inputFile) {
         try (BufferedReader reader = new BufferedReader(new FileReader(new File(inputFile)))){
             String line = reader.readLine();
+            String textBuffer = "";
+            boolean textFlag = false;
             while (line != null){
                 Matcher term;
 
+                if (textFlag && !line.contains("product/productId:")) {
+                    textBuffer = textBuffer.concat(" ").concat(line);
+//                    textBuffer = textBuffer.concat(line);
+                    line = reader.readLine();
+                    continue;
+
+                }
+
                 term = Pattern.compile("^product/productId: (.*)").matcher(line);
                 if (term.find()) {
+                    textFlag = false;
+                    if (!textBuffer.isEmpty()) {
+                        breakText(textBuffer.toLowerCase(), numOfReviews);
+                    }
                     ++numOfReviews;
                     reviewId.add(term.group(1));
                     addTerm(productDict, term.group(1), numOfReviews);
@@ -98,14 +114,19 @@ public class SlowIndexWriter{
                     continue;
                 }
 
-                term = Pattern.compile("^review/text: (.*)").matcher(line);  // TODO: What happens when there's a \n
+                term = Pattern.compile("^review/text: (.*)").matcher(line);
                 if (term.find()) {
-                    breakText(term.group(1).toLowerCase(), numOfReviews);
+                    textFlag = true;
+                    textBuffer = term.group(1);
                     line = reader.readLine();
                     continue;
                 }
 
-                line = reader.readLine();  // TODO: ??
+                line = reader.readLine();
+            }
+
+            if (!textBuffer.isEmpty()) {
+                breakText(textBuffer.toLowerCase(), numOfReviews);
             }
         } catch (IOException e) {
             System.err.println(e.getMessage());
