@@ -1,9 +1,6 @@
 package webdata;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.TreeMap;
@@ -81,7 +78,6 @@ public class SlowIndexWriter{
 
                 if (textFlag && !line.contains("product/productId:")) {
                     textBuffer = textBuffer.concat(" ").concat(line);
-//                    textBuffer = textBuffer.concat(line);
                     line = reader.readLine();
                     continue;
 

@@ -1,6 +1,6 @@
 package webdata;
 
-import java.io.Serializable;
+import java.io.*;
 import java.util.Collection;
 import java.util.TreeMap;
 
@@ -17,13 +17,14 @@ public class Dictionary implements Serializable {
     private int[] termPtr;
     private int numOfBlocks;
     private int numOfTerms;
+    private String outputPath;
 
     /**
      * Constructor.
      * @param termDict A mapping of tokens to their relevant frequencies.
      * @param isProduct Indicate whether the given map is of token or products.
      */
-    Dictionary(TreeMap<String, TreeMap<Integer, Integer>> termDict, Boolean isProduct) {
+    Dictionary(TreeMap<String, TreeMap<Integer, Integer>> termDict, Boolean isProduct, String path) {
         this.isProduct = isProduct;
         numOfTerms = termDict.size();
         numOfBlocks = (int)Math.ceil(numOfTerms / (double)K);
@@ -32,6 +33,7 @@ public class Dictionary implements Serializable {
         postingPtr = new long[numOfTerms];
         length = new byte[numOfTerms];
         prefixSize = new byte[numOfTerms];
+        this.outputPath = path;
         buildString(termDict);
     }
 
@@ -42,6 +44,15 @@ public class Dictionary implements Serializable {
     private void buildString(TreeMap<String, TreeMap<Integer, Integer>> termDict) {
         int i = 0;
         String prevTerm = "";
+
+        RandomAccessFile raf = null;
+        try{
+            raf = new RandomAccessFile(outputPath, "rw");
+        } catch (IOException e) {
+            System.err.println(e.getMessage());
+            System.exit(1);
+        }
+
         for (String term: termDict.keySet()) {  // For each token
             if (i % K == 0) {
                 termPtr[(i / 100)] = concatStr.length();
@@ -58,7 +69,7 @@ public class Dictionary implements Serializable {
             Collection<Integer> allFrequencies = termData.values();
             frequency[i] = allFrequencies.stream().mapToInt(Integer::intValue).sum();  // Sum all values
 
-            postingPtr[i] = encodePostingList(termData, term);
+            postingPtr[i] = Encoder.encode(termData, term, isProduct, raf);
 
             length[i] = (byte) term.length();
             prevTerm = term;
@@ -145,16 +156,5 @@ public class Dictionary implements Serializable {
             ++i;
         }
         return -1;  // TODO: ??
-    }
-
-
-    /**
-     *
-     * @param termData
-     * @param token
-     * @return
-     */
-    private long encodePostingList(TreeMap<Integer, Integer> termData, String token) {
-        return 1;
     }
 }
