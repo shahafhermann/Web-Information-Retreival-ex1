@@ -1,17 +1,29 @@
 package webdata;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.TreeMap;
 
 public class main {
-    public static void main(String[] args) {
-        byte[] test = Encoder.intToByte(3000);
-        System.out.println(test);
+    public static void main(String[] args) throws IOException {
+        int[] encodeTestKeys = {1, 32, 64, 101, 460, 5040, 84600, 501589};
+        int[] encodeTestValues = {5, 1000, 50189};
 
-        byte controlByte = (byte)((4 << 4) + 1);
-        System.out.println(controlByte);
+        RandomAccessFile encodeOutput = new RandomAccessFile(
+                "/Users/shahaf/Documents/UNI/אחזור מידע באינטרנט/ex1/encodeOutput.txt", "rw");
+        ArrayList<Byte> a = Encoder.encode(encodeTestKeys, true);
+        byte[] b = new byte[a.size()];
+        for (int i = 0; i < a.size(); ++i) {
+            b[i] = a.get(i);
+        }
+        int[] c = Encoder.decode(b, true);
+        System.out.println(c);
+
+//        encodeOutput.seek(0);
+//        byte[] bytesFromFile = new byte[(int) encodeOutput.length()];
+//        encodeOutput.readFully(bytesFromFile);
+//        int x = 1;
+
 
 //        SlowIndexWriter siw1 = new SlowIndexWriter();
 //        String inputFile1 = "/Users/shahaf/Documents/UNI/אחזור מידע באינטרנט/ex1/testReview1.txt";

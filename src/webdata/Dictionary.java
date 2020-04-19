@@ -69,7 +69,7 @@ public class Dictionary implements Serializable {
             Collection<Integer> allFrequencies = termData.values();
             frequency[i] = allFrequencies.stream().mapToInt(Integer::intValue).sum();  // Sum all values
 
-            postingPtr[i] = Encoder.encode(termData, term, isProduct, raf);
+//            postingPtr[i] = Encoder.encode(termData, isProduct, raf);
 
             length[i] = (byte) term.length();
             prevTerm = term;
