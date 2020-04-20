@@ -6,7 +6,7 @@ import java.util.TreeMap;
 
 public class main {
     public static void main(String[] args) throws IOException {
-        int[] encodeTestKeys = {1, 32, 64, 101, 460, 5040, 84600, 501589};
+        int[] encodeTestKeys = {1, 50, 500, 5000, 50000, 90000, 100000, 1000000, 10000000, 100000000, 2000000000};
         int[] encodeTestValues = {5, 1000, 50189};
 
         RandomAccessFile encodeOutput = new RandomAccessFile(

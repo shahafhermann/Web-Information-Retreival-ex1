@@ -6,75 +6,67 @@ import java.util.TreeMap;
 
 public class Dictionary implements Serializable {
 
-    private static final int K = 100;
-    boolean isProduct;
+    public TableOfContents table;
 
-    String concatStr = "";
-    private int[] frequency;
-    private long[] postingPtr;
-    private byte[] length;
-    private byte[] prefixSize;
+    private static final int K = 100;
+    private boolean isProduct;
+    private String concatStr = "";
     private int[] termPtr;
     private int numOfBlocks;
     private int numOfTerms;
-    private String outputPath;
 
     /**
      * Constructor.
      * @param termDict A mapping of tokens to their relevant frequencies.
      * @param isProduct Indicate whether the given map is of token or products.
      */
-    Dictionary(TreeMap<String, TreeMap<Integer, Integer>> termDict, Boolean isProduct, String path) {
+    Dictionary(TreeMap<String, TreeMap<Integer, Integer>> termDict, Boolean isProduct) {
         this.isProduct = isProduct;
         numOfTerms = termDict.size();
         numOfBlocks = (int)Math.ceil(numOfTerms / (double)K);
         termPtr = new int[numOfBlocks];
-        frequency = new int[numOfTerms];
-        postingPtr = new long[numOfTerms];
-        length = new byte[numOfTerms];
-        prefixSize = new byte[numOfTerms];
-        this.outputPath = path;
-        buildString(termDict);
+        table = new TableOfContents(numOfTerms);
+        build(termDict);
+    }
+
+    public int getNumOfTerms() {
+        return numOfTerms;
     }
 
     /**
      * Build the concatenated String with all known tokens.
      * Update all data structures with it's info.
      */
-    private void buildString(TreeMap<String, TreeMap<Integer, Integer>> termDict) {
+    private void build(TreeMap<String, TreeMap<Integer, Integer>> termDict) {
         int i = 0;
         String prevTerm = "";
-
-        RandomAccessFile raf = null;
-        try{
-            raf = new RandomAccessFile(outputPath, "rw");
-        } catch (IOException e) {
-            System.err.println(e.getMessage());
-            System.exit(1);
-        }
 
         for (String term: termDict.keySet()) {  // For each token
             if (i % K == 0) {
                 termPtr[(i / 100)] = concatStr.length();
-                prefixSize[i] = 0;
+                table.setPrefixSize(i, (byte)0);
                 concatStr = concatStr.concat(term);
             }
             else {
                 byte psize = findPrefix(prevTerm, term);
-                prefixSize[i] = psize;
+                table.setPrefixSize(i, psize);
                 concatStr = concatStr.concat(term.substring(psize));
             }
 
-            TreeMap<Integer, Integer> termData = termDict.get(term);
-            Collection<Integer> allFrequencies = termData.values();
-            frequency[i] = allFrequencies.stream().mapToInt(Integer::intValue).sum();  // Sum all values
+            buildFrequency(termDict, i, term);
 
 //            postingPtr[i] = Encoder.encode(termData, isProduct, raf);
 
-            length[i] = (byte) term.length();
+            table.setLength(i, (byte) term.length());
             prevTerm = term;
             ++i;
         }
+    }
+
+    private void buildFrequency(TreeMap<String, TreeMap<Integer, Integer>> termDict, int i, String term) {
+        TreeMap<Integer, Integer> termData = termDict.get(term);
+        Collection<Integer> allFrequencies = termData.values();
+        table.setFrequency(i, allFrequencies.stream().mapToInt(Integer::intValue).sum());  // Sum all values
     }
 
     /**
@@ -94,14 +86,14 @@ public class Dictionary implements Serializable {
     }
 
     public int searchTerm(String term) {
-        return binarySearch(0, termPtr.length - 1, term);
+        return binarySearch(0, numOfBlocks - 1, term);  // TODO: debug numOfBlocks - 1
     }
 
 
     private int binarySearch(int left, int right, String term) {
         if (right == left) {
-            if (term.equals(concatStr.substring(termPtr[left], termPtr[left] + length[left * 100])))
-                return left;  // TODO: What do we return?
+            if (term.equals(concatStr.substring(termPtr[left], termPtr[left] + table.getLength(left * 100))))
+                return left * 100;  // TODO: What do we return?
             return rangeSearch(left, term);
         }
         if (right > left) {
@@ -110,18 +102,19 @@ public class Dictionary implements Serializable {
 
             // If the element is present at the
             // middle itself
-            if (term.equals(concatStr.substring(termPtr[mid], termPtr[mid] + length[mid * 100])))
-                return mid;  // TODO: What do we return?
+            if (term.equals(concatStr.substring(termPtr[mid], termPtr[mid] + table.getLength(mid * 100))))
+                return mid * 100;
 
             // If element is smaller than mid, then
             // it can only be present in left subarray
-            if (term.compareTo(concatStr.substring(termPtr[mid], termPtr[mid] + length[mid * 100])) < 0)
+            if (term.compareTo(concatStr.substring(termPtr[mid], termPtr[mid] + table.getLength(mid * 100))) < 0)
                 return binarySearch(left, mid - 1, term);
 
             // Else the element can only be present
             // in right subarray
-            if (term.compareTo(concatStr.substring(termPtr[mid + 1], termPtr[mid + 1] + length[(mid + 1) * 100])) < 0) {
-                return binarySearch(mid, mid, term);  // TODO: What do we return?
+            if (term.compareTo(concatStr.substring(termPtr[mid + 1],
+                                                   termPtr[mid + 1] + table.getLength((mid + 1) * 100))) < 0) {
+                return binarySearch(mid, mid, term);
             }
 
             return binarySearch(mid + 1, right, term);
@@ -136,25 +129,25 @@ public class Dictionary implements Serializable {
     private int rangeSearch(int left, String term) {
         int basePtr = termPtr[left];
         int i = left * 100 ;
-        String prevTerm = concatStr.substring(basePtr, basePtr + length[i]);
-        basePtr += length[i];
+        String prevTerm = concatStr.substring(basePtr, basePtr + table.getLength(i));
+        basePtr += table.getLength(i);
 
         String curr;
         // Set the bound to fit the number of terms in the current block (starts at index left)
-        int bound = ((left == termPtr.length - 1) && (length.length - i < 100)) ?  length.length - i : i + 100;
+        int bound = ((left == termPtr.length - 1) && (numOfTerms - i < 100)) ?  numOfTerms - i : i + 100;
         ++i;
         while (i < bound) {
-            curr = concatStr.substring(basePtr, basePtr + length[i] - prefixSize[i]);
-            String prefix = prevTerm.substring(0, prefixSize[i]);
+            curr = concatStr.substring(basePtr, basePtr + table.getLength(i) - table.getPrefixSize(i));
+            String prefix = prevTerm.substring(0, table.getPrefixSize(i));
             curr = prefix.concat(curr);
             if (term.equals(curr)) {
-                return 0;  // TODO: ??
+                return i;
             }
 
             prevTerm = curr;
-            basePtr += length[i] - prefixSize[i];
+            basePtr += table.getLength(i) - table.getPrefixSize(i);
             ++i;
         }
-        return -1;  // TODO: ??
+        return -1;
     }
 }

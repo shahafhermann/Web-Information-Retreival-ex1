@@ -11,8 +11,17 @@ import java.util.TreeMap;
 
 public final class Encoder {
 
+    /**
+     * Empty and private constructor to make this class static.
+     */
     private Encoder() {}
 
+    /**
+     *
+     * @param values
+     * @param codeAsGap
+     * @return
+     */
     public static ArrayList<Byte> encode(int[] values, boolean codeAsGap) {
         int size = values.length;
         ArrayList<Byte> encoded = new ArrayList<>(padByte(intToByte(size)));
@@ -34,8 +43,10 @@ public final class Encoder {
             prevVal = (codeAsGap) ? val : 0;
             ++counter;
         }
-        encoded.add(controlByte);
-        encoded.addAll(tempGroup);
+        if (!tempGroup.isEmpty()) {
+            encoded.add(controlByte);
+            encoded.addAll(tempGroup);
+        }
         return encoded;
 
 
@@ -79,17 +90,31 @@ public final class Encoder {
 //        return -1;
     }
 
+    /**
+     * Decode a byte array to an int array using varint group decoding. If codeAsGap is true than the bytes should
+     * represent a gap difference.
+     * @param values The byte array
+     * @param codeAsGap Indicate whether there's a gap difference
+     * @return The corresponding int array.
+     */
     public static int[] decode(byte[] values, boolean codeAsGap) {
         int size = byteArrayToInt(Arrays.copyOfRange(values, 0, 4));
+        int numOfGroupsOfLastControlByte = size % 4;
         int[] decoded = new int[size];
         int groupCounter = 0;
         int[] groupSizes = new int[4];
         int groupIndex = 4; // First index of data
-        int prevVal = 0;
+        int prevVal = 0, curGroupPerControl;
+        boolean lastControl = false;
 
         while (groupCounter < size) {
-            int curGroupPerControl = groupCounter % 4;
+            curGroupPerControl = groupCounter % 4;
+            curGroupPerControl += (lastControl) ? (4 - numOfGroupsOfLastControlByte) : 0;
             if (curGroupPerControl == 0) {  // This is a control byte
+                if (groupCounter == size - numOfGroupsOfLastControlByte) {  // This is the LAST control byte
+                    lastControl = true;
+                    curGroupPerControl += (4 - numOfGroupsOfLastControlByte);
+                }
                 groupSizes = decodeControlByte(values[groupIndex]);
                 ++groupIndex;
             }
@@ -139,7 +164,6 @@ public final class Encoder {
         int pad = 4 - arr.length;
         for (int i = 0; i < arr.length; ++i) {
             newArr[i + pad] = arr[i];
-            ++i;
         }
         return newArr;
     }
