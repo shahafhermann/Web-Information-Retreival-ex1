@@ -1,6 +1,7 @@
 package webdata;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.TreeMap;
 
@@ -14,6 +15,13 @@ public class Dictionary implements Serializable {
     private int[] termPtr;
     private int numOfBlocks;
     private int numOfTerms;
+
+//    private static class TableOfContents {
+//        private int[] frequency;
+//        private long[] postingPtr;
+//        private byte[] length;
+//        private byte[] prefixSize;
+//    }
 
     /**
      * Constructor.
@@ -53,9 +61,9 @@ public class Dictionary implements Serializable {
                 concatStr = concatStr.concat(term.substring(psize));
             }
 
-            buildFrequency(termDict, i, term);
+            buildFrequency(termDict.get(term), i);
 
-//            postingPtr[i] = Encoder.encode(termData, isProduct, raf);
+            buildPostingList(termDict.get(term), i);  // TODO: WHAT
 
             table.setLength(i, (byte) term.length());
             prevTerm = term;
@@ -63,10 +71,35 @@ public class Dictionary implements Serializable {
         }
     }
 
-    private void buildFrequency(TreeMap<String, TreeMap<Integer, Integer>> termDict, int i, String term) {
-        TreeMap<Integer, Integer> termData = termDict.get(term);
+    private void buildFrequency(TreeMap<Integer, Integer> termData, int i) {
         Collection<Integer> allFrequencies = termData.values();
         table.setFrequency(i, allFrequencies.stream().mapToInt(Integer::intValue).sum());  // Sum all values
+    }
+
+    private void buildPostingList(TreeMap<Integer, Integer> termData, int i) {
+        ArrayList<Integer> reviews = new ArrayList<>(termData.keySet());
+        ArrayList<Byte> encodedReviews = Encoder.encode(reviews, true);
+        table.setPostingPtr(i, write(encodedReviews, dir));
+        if (!isProduct) {
+            ArrayList<Integer> frequencies = new ArrayList<>(termData.values());
+            ArrayList<Byte> encodedFrequencies = Encoder.encode(frequencies, false);
+            write(encodedFrequencies, dir);
+        }
+    }
+
+    public static long write(ArrayList<Byte> arr, String dir){
+        try (RandomAccessFile raf = new RandomAccessFile(dir, "rw")){
+            raf.seek(raf.length());
+            long pos = raf.getFilePointer();
+            for (byte b: arr) {
+                raf.writeByte(b);
+            }
+            return pos;
+        } catch (IOException e) {
+            System.err.println(e.getMessage());
+            System.exit(1);
+        }
+        return -1;  // Will never happen
     }
 
     /**
@@ -85,11 +118,22 @@ public class Dictionary implements Serializable {
         return (byte)minLength;
     }
 
+    /**
+     *
+     * @param term
+     * @return
+     */
     public int searchTerm(String term) {
         return binarySearch(0, numOfBlocks - 1, term);  // TODO: debug numOfBlocks - 1
     }
 
-
+    /**
+     *
+     * @param left
+     * @param right
+     * @param term
+     * @return
+     */
     private int binarySearch(int left, int right, String term) {
         if (right == left) {
             if (term.equals(concatStr.substring(termPtr[left], termPtr[left] + table.getLength(left * 100))))

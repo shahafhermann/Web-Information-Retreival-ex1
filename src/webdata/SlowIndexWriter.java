@@ -1,5 +1,7 @@
 package webdata;
 
+import java.io.BufferedWriter;
+
 /**
  *
  */
@@ -12,21 +14,25 @@ public class SlowIndexWriter{
      *            created.
      */
     public void slowWrite(String inputFile, String dir) {
-        ReviewsParser parser = new ReviewsParser();
-        parser.parseFile(inputFile);
-
-        Dictionary tokenDict = new Dictionary(parser.getTokenDict(), false);
-        Dictionary productDict = new Dictionary(parser.getProductDict(), true);
-
-        ReviewData rd = new ReviewData(parser.getProductId(), parser.getReviewHelpfulness(),
-                                       parser.getReviewScore(), parser.getTokensPerReview(), parser.getNumOfReviews());
-
-        tokenPostingList.write(parser.getTokenDict());
-        productPostingList.write(parser.getProductDict());
-
-        tokenDict.table.setPostingPtr(tokenPostingList.read());
-
-        writeObject(tokenDict);
+//        ReviewsParser parser = new ReviewsParser();
+//        parser.parseFile(inputFile);
+//
+//        Dictionary tokenDict = new Dictionary(parser.getTokenDict(), false);
+//        Dictionary productDict = new Dictionary(parser.getProductDict(), true);
+//
+//        ReviewData rd = new ReviewData(parser.getProductId(), parser.getReviewHelpfulness(),
+//                                       parser.getReviewScore(), parser.getTokensPerReview(), parser.getNumOfReviews());
+//
+//        ////
+//        PostingList tokenPostingList = new...
+//
+//        tokenPostingList.write(parser.getTokenDict());
+//        productPostingList.write(parser.getProductDict());
+//
+//        tokenDict.table.setPostingPtr(tokenDict.postingList.read(pos));
+//        ////
+//
+//        writeObject(tokenDict);
 
     }
 

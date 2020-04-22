@@ -31,7 +31,7 @@ public class IndexReader {
      *         Returns null if there is no review with the given identifier.
      */
     public String getProductId(int reviewId) {
-        return rd.getProductId(reviewId);
+        return (rd.getNumOfReviews() > reviewId) ? rd.getProductId(reviewId) : null;
     }
 
     /**
@@ -40,8 +40,8 @@ public class IndexReader {
      *         Returns -1 if there is no review with the given identifier.
      */
     public int getReviewScore(int reviewId) {
-        String score = rd.getReviewScore(reviewId);
-        return Integer.parseInt(score);  //TODO: taking care of the decimal dot?
+        String score = (rd.getNumOfReviews() > reviewId) ? rd.getReviewScore(reviewId).split("\\.")[0] : "-1";
+        return Integer.parseInt(score);
     }
 
     /**
@@ -50,9 +50,12 @@ public class IndexReader {
      *         Returns -1 if there is no review with the given identifier
      */
     public int getReviewHelpfulnessNumerator(int reviewId) {
+        if (rd.getNumOfReviews() <= reviewId) {
+            return -1;
+        }
         String helpfulness = rd.getReviewHelpfulness(reviewId);
         String numerator = helpfulness.split("/")[0];
-        return Integer.parseInt(numerator);  //TODO: taking care of the decimal dot?
+        return Integer.parseInt(numerator);
     }
 
     /**
@@ -61,9 +64,12 @@ public class IndexReader {
      *         Returns -1 if there is no review with the given identifier
      */
     public int getReviewHelpfulnessDenominator(int reviewId) {
+        if (rd.getNumOfReviews() <= reviewId) {
+            return -1;
+        }
         String helpfulness = rd.getReviewHelpfulness(reviewId);
         String denominator = helpfulness.split("/")[1];
-        return Integer.parseInt(denominator);  //TODO: taking care of the decimal dot?
+        return Integer.parseInt(denominator);
     }
 
     /**
@@ -71,8 +77,8 @@ public class IndexReader {
      * @return The number of tokens in a given review
      *         Returns -1 if there is no review with the given identifier
      */
-    public int getReviewLength(int reviewId) {
-        return Integer.parseInt(rd.getTokensPerReview(reviewId));  // TODO: Check with Sara, we return duplicates
+    public int getReviewLength(int reviewId) {  // TODO: Check with Sara, we return duplicates
+        return (rd.getNumOfReviews() > reviewId) ? Integer.parseInt(rd.getTokensPerReview(reviewId)) : -1;
     }
 
 
@@ -84,9 +90,9 @@ public class IndexReader {
      * @return The number of reviews containing a given token (i.e., word)
      *         Returns 0 if there are no reviews containing this token
      */
-    public int getTokenFrequency(String token) {
-
-    }
+//    public int getTokenFrequency(String token) {
+//
+//    }
 
     /**
      * @param token The token to check.
@@ -95,7 +101,7 @@ public class IndexReader {
      */
     public int getTokenCollectionFrequency(String token) {
         int i = tokenDict.searchTerm(token);
-        return tokenDict.table.getFrequency(i);
+        return (i == -1) ? 0 : tokenDict.table.getFrequency(i);
     }
 
     /**
@@ -106,9 +112,9 @@ public class IndexReader {
      *         Note that the integers should be sorted by id.
      *         Returns an empty Enumeration if there are no reviews containing this token.
      */
-     public Enumeration<Integer> getReviewsWithToken(String token) {
-
-     }
+//     public Enumeration<Integer> getReviewsWithToken(String token) {
+//
+//     }
 
 
      // --------------------------------------------------------- //
@@ -142,7 +148,7 @@ public class IndexReader {
      *         Note that the integers returned should be sorted by id.
      *         Returns an empty Enumeration if there are no reviews for this product.
      */
-    public Enumeration<Integer> getProductReviews(String productId) {
-
-    }
+//    public Enumeration<Integer> getProductReviews(String productId) {
+//
+//    }
 }

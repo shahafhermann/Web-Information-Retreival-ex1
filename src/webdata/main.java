@@ -1,23 +1,50 @@
 package webdata;
 
 import java.io.*;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.TreeMap;
+import java.util.stream.Collectors;
 
 public class main {
     public static void main(String[] args) throws IOException {
-        int[] encodeTestKeys = {1, 50, 500, 5000, 50000, 90000, 100000, 1000000, 10000000, 100000000, 2000000000};
-        int[] encodeTestValues = {5, 1000, 50189};
-
-        RandomAccessFile encodeOutput = new RandomAccessFile(
-                "/Users/shahaf/Documents/UNI/אחזור מידע באינטרנט/ex1/encodeOutput.txt", "rw");
-        ArrayList<Byte> a = Encoder.encode(encodeTestKeys, true);
-        byte[] b = new byte[a.size()];
-        for (int i = 0; i < a.size(); ++i) {
-            b[i] = a.get(i);
+        byte[] arr = {0, 0, 0, 2, 5, 10, 32, 11, 127};
+        ArrayList<Byte> arrB = new ArrayList<>();
+        for(byte a: arr) {
+            arrB.add(a);
         }
-        int[] c = Encoder.decode(b, true);
-        System.out.println(c);
+        long pos = Dictionary.write(arrB, "/Users/shahaf/Documents/UNI/אחזור מידע באינטרנט/ex1/encodeOutput1.txt");
+        System.out.println(pos);
+
+        pos = Dictionary.write(arrB, "/Users/shahaf/Documents/UNI/אחזור מידע באינטרנט/ex1/encodeOutput1.txt");
+        System.out.println(pos);
+
+
+
+//        String score = "5.0".split("\\.")[0];
+//        String numerator = "19/20".split("/")[0];
+//        String denominator = "19/20".split("/")[1];
+//        System.out.println(Integer.parseInt(numerator));
+//        System.out.println(Integer.parseInt(denominator));
+//        System.out.println(Integer.parseInt("5.5"));
+//        System.out.println(Integer.parseInt("5"));
+//        System.out.println(Integer.parseInt(" 5.0"));
+//        System.out.println(Integer.parseInt("5.0 "));
+
+
+//        int[] encodeTestKeys = {1, 50, 500, 5000, 50000, 90000, 100000, 1000000, 10000000, 100000000, 2000000000};
+//        int[] encodeTestValues = {5, 1000, 50189};
+//
+//        RandomAccessFile encodeOutput = new RandomAccessFile(
+//                "/Users/shahaf/Documents/UNI/אחזור מידע באינטרנט/ex1/encodeOutput.txt", "rw");
+//        ArrayList<Byte> a = Encoder.encode(encodeTestKeys, true);
+//        byte[] b = new byte[a.size()];
+//        for (int i = 0; i < a.size(); ++i) {
+//            b[i] = a.get(i);
+//        }
+//        int[] c = Encoder.decode(b, true);
+//        System.out.println(c);
 
 //        encodeOutput.seek(0);
 //        byte[] bytesFromFile = new byte[(int) encodeOutput.length()];

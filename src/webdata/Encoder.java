@@ -22,8 +22,8 @@ public final class Encoder {
      * @param codeAsGap
      * @return
      */
-    public static ArrayList<Byte> encode(int[] values, boolean codeAsGap) {
-        int size = values.length;
+    public static ArrayList<Byte> encode(ArrayList<Integer> values, boolean codeAsGap) {
+        int size = values.size();
         ArrayList<Byte> encoded = new ArrayList<>(padByte(intToByte(size)));
         int counter = 1;
         ArrayList<Byte> tempGroup = new ArrayList<>();
@@ -48,46 +48,6 @@ public final class Encoder {
             encoded.addAll(tempGroup);
         }
         return encoded;
-
-
-
-
-//        try {
-//            long pos = raf.getFilePointer();  // TODO: make sure it's EOF
-
-//            int prevReview = termData.firstKey();
-//            byte[] numOfReviews = intToByte(termData.size());
-//            byte[] reviewAsBytes = intToByte(prevReview);
-//            byte[] freqAsBytes = intToByte(termData.get(prevReview));
-//            // First we encode the review number and than the frequency in the review
-//            byte controlByte = (byte)(((numOfReviews.length - 1) << 4) + ((reviewAsBytes.length - 1) << 2) +
-//                                freqAsBytes.length - 1);
-//
-//            raf.writeByte(controlByte);
-//            raf.write(numOfReviews);
-//            raf.write(reviewAsBytes);
-//            raf.write(freqAsBytes);
-//
-//            termData.remove(prevReview);
-//            for (Integer review: termData.keySet()) {
-//                reviewAsBytes = intToByte(review - prevReview);
-//                freqAsBytes = intToByte(termData.get(review));
-//                // First we encode the review number and than the frequency in the review
-//                controlByte = (byte)(((reviewAsBytes.length - 1) << 2) + freqAsBytes.length - 1);
-//
-//                raf.writeByte(controlByte);
-//                raf.write(reviewAsBytes);
-//                raf.write(freqAsBytes);
-//
-//                prevReview = review;
-//            }
-//            return pos;
-//
-//        } catch (IOException e) {
-//            System.err.println(e.getMessage());
-//            System.exit(1);
-//        }
-//        return -1;
     }
 
     /**
