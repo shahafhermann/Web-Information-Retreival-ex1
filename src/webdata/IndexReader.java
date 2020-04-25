@@ -1,5 +1,7 @@
 package webdata;
 
+import java.io.*;
+import java.rmi.server.ExportException;
 import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.Vector;
@@ -18,13 +20,22 @@ public class IndexReader {
      * @param dir The directory to read from.
      */
     public IndexReader(String dir) {
-        //TODO: Read dictionaries from disk
-        ReviewsParser parser = new ReviewsParser();
-        parser.parseFile(dir + "/100.txt");
-        tokenDict = new Dictionary(parser.getTokenDict(), false, dir);
-        productDict = new Dictionary(parser.getProductDict(), true, dir);
-        rd = new ReviewData(parser.getProductId(), parser.getReviewHelpfulness(), parser.getReviewScore(),
-                            parser.getTokensPerReview(), parser.getNumOfReviews());
+        try {
+            ObjectInputStream tokenDictReader = new ObjectInputStream(new FileInputStream(dir + File.separator + SlowIndexWriter.tokenDictFileName));
+            tokenDict = (Dictionary) tokenDictReader.readObject();
+            tokenDictReader.close();
+
+            ObjectInputStream productDictReader = new ObjectInputStream(new FileInputStream(dir + File.separator + SlowIndexWriter.productDictFileName));
+            productDict = (Dictionary) productDictReader.readObject();
+            productDictReader.close();
+
+            ObjectInputStream reviewDataReader = new ObjectInputStream(new FileInputStream(dir + File.separator + SlowIndexWriter.reviewDataFileName));
+            rd = (ReviewData) reviewDataReader.readObject();
+            reviewDataReader.close();
+        } catch(IOException|ClassNotFoundException e) {
+            System.err.println(e.getMessage());
+            System.exit(1);
+        }
     }
 
     /**

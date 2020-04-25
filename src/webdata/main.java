@@ -2,16 +2,28 @@ package webdata;
 
 import java.io.*;
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.TreeMap;
-import java.util.Vector;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class main {
     public static void main(String[] args) throws IOException {
         String dir = "/Users/shahaf/Documents/UNI/אחזור מידע באינטרנט/ex1";
-        String file = "/100.txt";
+        String file = "/1000.txt";
+
+        SlowIndexWriter siw = new SlowIndexWriter();
+        siw.slowWrite(dir + file, dir);
+
+//            System.out.println(Arrays.equals(tokenDict.table.prefixSize, d.table.prefixSize));
+//            System.out.println(Arrays.equals(tokenDict.table.length, d.table.length));
+//            System.out.println(Arrays.equals(tokenDict.table.postingPtr, d.table.postingPtr));
+//            System.out.println(Arrays.equals(tokenDict.table.frequency, d.table.frequency));
+//
+//            System.out.println(tokenDict.isProduct == d.isProduct);
+//            System.out.println(tokenDict.numOfBlocks == d.numOfBlocks);
+//            System.out.println(tokenDict.numOfTerms == d.numOfTerms);
+//            System.out.println(Arrays.equals(tokenDict.termPtr, d.termPtr));
+//            System.out.println(tokenDict.concatStr.equals(d.concatStr));
+//            System.out.println(tokenDict.path.equals(d.path));
 
 //        ReviewsParser parser = new ReviewsParser();
 //        parser.parseFile(dir + file);
@@ -29,13 +41,16 @@ public class main {
 //            tokenDict.read(pos, nextPos);
 //        }
 
-        File f = new File("/Users/shahaf/Documents/UNI/אחזור מידע באינטרנט/ex1/testingFiles/tempToken");
-        f.delete();
-        f = new File("/Users/shahaf/Documents/UNI/אחזור מידע באינטרנט/ex1/testingFiles/tempProduct");
-        f.delete();
-
-        IndexReader ir = new IndexReader(dir);
-        System.out.println(ir.getTokenSizeOfReviews());
+//        File f = new File("/Users/shahaf/Documents/UNI/אחזור מידע באינטרנט/ex1/testingFiles/tempToken");
+//        f.delete();
+//        f = new File("/Users/shahaf/Documents/UNI/אחזור מידע באינטרנט/ex1/testingFiles/tempProduct");
+//        f.delete();
+//
+//        IndexReader ir = new IndexReader(dir);
+//        Enumeration<Integer> e = ir.getReviewsWithToken("ze");
+//        while (e.hasMoreElements()) {
+//            System.out.println(e.nextElement());
+//        }
 //        System.out.println(ir.getReviewsWithToken("the"));
 //        System.out.println(ir.getReviewsWithToken("popcorn"));
 //        System.out.println(ir.getReviewsWithToken("zohar"));

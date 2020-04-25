@@ -1,11 +1,18 @@
 package webdata;
 
-import java.io.BufferedWriter;
+import java.io.*;
+import java.util.Arrays;
 
 /**
  *
  */
 public class SlowIndexWriter{
+
+    static final String tokenDictFileName = "tokenDict";
+    static final String productDictFileName = "productDict";
+    static final String reviewDataFileName = "reviewData";
+    static final String productPostingListFileName = "productPostingList";
+    static final String tokenPostingListFileName = "tokenPostingList";
 
     /**
      * Given product review data, creates an on disk index.
@@ -14,26 +21,34 @@ public class SlowIndexWriter{
      *            created.
      */
     public void slowWrite(String inputFile, String dir) { //  TODO: first, remove index
-//        ReviewsParser parser = new ReviewsParser();
-//        parser.parseFile(inputFile);
-//
-//        Dictionary tokenDict = new Dictionary(parser.getTokenDict(), false);
-//        Dictionary productDict = new Dictionary(parser.getProductDict(), true);
-//
-//        ReviewData rd = new ReviewData(parser.getProductId(), parser.getReviewHelpfulness(),
-//                                       parser.getReviewScore(), parser.getTokensPerReview(), parser.getNumOfReviews());
-//
-//        ////
-//        PostingList tokenPostingList = new...
-//
-//        tokenPostingList.write(parser.getTokenDict());
-//        productPostingList.write(parser.getProductDict());
-//
-//        tokenDict.table.setPostingPtr(tokenDict.postingList.read(pos));
-//        ////
-//
-//        writeObject(tokenDict);
+        removeIndex(dir);
 
+        ReviewsParser parser = new ReviewsParser();
+        parser.parseFile(inputFile);
+
+        Dictionary tokenDict = new Dictionary(parser.getTokenDict(), false, dir);
+        Dictionary productDict = new Dictionary(parser.getProductDict(), true, dir);
+
+        ReviewData rd = new ReviewData(parser.getProductId(), parser.getReviewHelpfulness(),
+                parser.getReviewScore(), parser.getTokensPerReview(), parser.getNumOfReviews());
+
+        try {
+            /* Write the new files */
+            ObjectOutputStream tokenDictWriter = new ObjectOutputStream(new FileOutputStream(dir + File.separator + tokenDictFileName));
+            tokenDictWriter.writeObject(tokenDict);
+            tokenDictWriter.close();
+
+            ObjectOutputStream productDictWriter = new ObjectOutputStream(new FileOutputStream(dir + File.separator + productDictFileName));
+            productDictWriter.writeObject(productDict);
+            productDictWriter.close();
+
+            ObjectOutputStream reviewDataWriter = new ObjectOutputStream(new FileOutputStream(dir + File.separator + reviewDataFileName));
+            reviewDataWriter.writeObject(rd);
+            reviewDataWriter.close();
+        } catch(IOException e) {
+            System.err.println(e.getMessage());
+            System.exit(1);
+        }
     }
 
     /**
@@ -41,6 +56,15 @@ public class SlowIndexWriter{
      * @param dir The directory to remove the index from.
      */
     public void removeIndex(String dir) {
-
+        File tokenDictFile = new File(dir + File.separator + tokenDictFileName);
+        tokenDictFile.delete();
+        File productDictFile = new File(dir + File.separator + productDictFileName);
+        productDictFile.delete();
+        File reviewDataFile = new File(dir + File.separator + reviewDataFileName);
+        reviewDataFile.delete();
+        File productPostingListFile = new File(dir + File.separator + productPostingListFileName);
+        productPostingListFile.delete();
+        File tokenPostingListFile = new File(dir + File.separator + tokenPostingListFileName);
+        tokenPostingListFile.delete();
     }
 }

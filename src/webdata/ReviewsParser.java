@@ -148,6 +148,7 @@ public class ReviewsParser {
             }
         } catch (IOException e) {
             System.err.println(e.getMessage());
+            System.exit(1);
         }
     }
 }

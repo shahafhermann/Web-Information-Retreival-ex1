@@ -9,13 +9,13 @@ public class Dictionary implements Serializable {
 
     public TableOfContents table;
 
-    private static final int K = 100;
-    private boolean isProduct;
-    private String concatStr = "";
-    private int[] termPtr;
-    private int numOfBlocks;
-    private int numOfTerms;
-    private String path;
+    static final int K = 100;
+    boolean isProduct;
+    String concatStr = "";
+    int[] termPtr;
+    int numOfBlocks;
+    int numOfTerms;
+    String path;
 
     /**
      * Constructor.
@@ -28,8 +28,10 @@ public class Dictionary implements Serializable {
         numOfBlocks = (int)Math.ceil(numOfTerms / (double)K);
         termPtr = new int[numOfBlocks];
         table = new TableOfContents(numOfTerms);
-        // TODO: delete the folder
-        path = (isProduct) ? dir + "/testingFiles/tempProduct" : dir + "/testingFiles/tempToken";
+
+        path = (isProduct) ?
+                dir + File.separator + SlowIndexWriter.productPostingListFileName :
+                dir + File.separator + SlowIndexWriter.tokenPostingListFileName;
 
         build(termDict);
     }
@@ -147,7 +149,7 @@ public class Dictionary implements Serializable {
             byte[] byteArray = new byte[(int) (nextPos - pos)];
             raf.read(byteArray);
 
-            long[] endPtr = new long[1];  // TODO does this change
+            long[] endPtr = new long[1];
             Integer[] reviews = Encoder.decode(byteArray, true, endPtr);
             assert (len == reviews.length);
             if (!isProduct) {
@@ -215,7 +217,7 @@ public class Dictionary implements Serializable {
      * @return
      */
     public int searchTerm(String term) {
-        return binarySearch(0, numOfBlocks - 1, term);  // TODO: debug numOfBlocks - 1
+        return binarySearch(0, numOfBlocks - 1, term);
     }
 
     /**
@@ -268,7 +270,7 @@ public class Dictionary implements Serializable {
 
         String curr;
         // Set the bound to fit the number of terms in the current block (starts at index left)
-        int bound = ((left == termPtr.length - 1) && (numOfTerms - i < K)) ?  numOfTerms - i : i + K;
+        int bound = ((left == termPtr.length - 1) && (numOfTerms - i < K)) ? numOfTerms : i + K;
         ++i;
         while (i < bound) {
             curr = concatStr.substring(basePtr, basePtr + table.getLength(i) - table.getPrefixSize(i));

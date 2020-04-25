@@ -1,10 +1,12 @@
 package webdata;
 
-public class TableOfContents {
-    private int[] frequency;
-    private long[] postingPtr;
-    private byte[] length;
-    private byte[] prefixSize;
+import java.io.Serializable;
+
+public class TableOfContents implements Serializable {
+    int[] frequency;
+    long[] postingPtr;
+    byte[] length;
+    byte[] prefixSize;
 
     TableOfContents (int numOfTerms) {
         frequency = new int[numOfTerms];
