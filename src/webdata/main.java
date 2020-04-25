@@ -5,20 +5,54 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.TreeMap;
+import java.util.Vector;
 import java.util.stream.Collectors;
 
 public class main {
     public static void main(String[] args) throws IOException {
-        byte[] arr = {0, 0, 0, 2, 5, 10, 32, 11, 127};
-        ArrayList<Byte> arrB = new ArrayList<>();
-        for(byte a: arr) {
-            arrB.add(a);
-        }
-        long pos = Dictionary.write(arrB, "/Users/shahaf/Documents/UNI/אחזור מידע באינטרנט/ex1/encodeOutput1.txt");
-        System.out.println(pos);
+        String dir = "/Users/shahaf/Documents/UNI/אחזור מידע באינטרנט/ex1";
+        String file = "/100.txt";
 
-        pos = Dictionary.write(arrB, "/Users/shahaf/Documents/UNI/אחזור מידע באינטרנט/ex1/encodeOutput1.txt");
-        System.out.println(pos);
+//        ReviewsParser parser = new ReviewsParser();
+//        parser.parseFile(dir + file);
+//
+//        Dictionary tokenDict = new Dictionary(parser.getTokenDict(), false, dir);
+//        Dictionary productDict = new Dictionary(parser.getProductDict(), true, dir);
+//
+//        ReviewData rd = new ReviewData(parser.getProductId(), parser.getReviewHelpfulness(),
+//                                       parser.getReviewScore(), parser.getTokensPerReview(), parser.getNumOfReviews());
+
+//        int i = tokenDict.searchTerm("pop");
+//        if (!(i < 0 || i >= tokenDict.getNumOfTerms())) {
+//            long pos = tokenDict.table.getPostingPtr(i);
+//            long nextPos = (i + 1 < tokenDict.getNumOfTerms()) ? tokenDict.table.getPostingPtr(i + 1) : -1;
+//            tokenDict.read(pos, nextPos);
+//        }
+
+        File f = new File("/Users/shahaf/Documents/UNI/אחזור מידע באינטרנט/ex1/testingFiles/tempToken");
+        f.delete();
+        f = new File("/Users/shahaf/Documents/UNI/אחזור מידע באינטרנט/ex1/testingFiles/tempProduct");
+        f.delete();
+
+        IndexReader ir = new IndexReader(dir);
+        System.out.println(ir.getTokenSizeOfReviews());
+//        System.out.println(ir.getReviewsWithToken("the"));
+//        System.out.println(ir.getReviewsWithToken("popcorn"));
+//        System.out.println(ir.getReviewsWithToken("zohar"));
+
+
+
+
+//        byte[] arr = {0, 0, 0, 2, 5, 10, 32, 11, 127};
+//        ArrayList<Byte> arrB = new ArrayList<>();
+//        for(byte a: arr) {
+//            arrB.add(a);
+//        }
+//        long pos = Dictionary.write(arrB, "/Users/shahaf/Documents/UNI/אחזור מידע באינטרנט/ex1/encodeOutput1.txt");
+//        System.out.println(pos);
+//
+//        pos = Dictionary.write(arrB, "/Users/shahaf/Documents/UNI/אחזור מידע באינטרנט/ex1/encodeOutput1.txt");
+//        System.out.println(pos);
 
 
 

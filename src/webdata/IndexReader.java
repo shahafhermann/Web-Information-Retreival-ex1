@@ -20,7 +20,7 @@ public class IndexReader {
     public IndexReader(String dir) {
         //TODO: Read dictionaries from disk
         ReviewsParser parser = new ReviewsParser();
-        parser.parseFile(dir);
+        parser.parseFile(dir + "/100.txt");
         tokenDict = new Dictionary(parser.getTokenDict(), false, dir);
         productDict = new Dictionary(parser.getProductDict(), true, dir);
         rd = new ReviewData(parser.getProductId(), parser.getReviewHelpfulness(), parser.getReviewScore(),
@@ -33,7 +33,7 @@ public class IndexReader {
      *         Returns null if there is no review with the given identifier.
      */
     public String getProductId(int reviewId) {
-        return (rd.getNumOfReviews() > reviewId) ? rd.getProductId(reviewId) : null;
+        return ((1 <= reviewId) && (reviewId <= rd.getNumOfReviews())) ? rd.getProductId(reviewId - 1) : null;
     }
 
     /**
@@ -42,7 +42,8 @@ public class IndexReader {
      *         Returns -1 if there is no review with the given identifier.
      */
     public int getReviewScore(int reviewId) {
-        String score = (rd.getNumOfReviews() > reviewId) ? rd.getReviewScore(reviewId).split("\\.")[0] : "-1";
+        String score = ((1 <= reviewId) && (reviewId <= rd.getNumOfReviews())) ?
+                        rd.getReviewScore(reviewId - 1).split("\\.")[0] : "-1";
         return Integer.parseInt(score);
     }
 
@@ -52,10 +53,10 @@ public class IndexReader {
      *         Returns -1 if there is no review with the given identifier
      */
     public int getReviewHelpfulnessNumerator(int reviewId) {
-        if (rd.getNumOfReviews() <= reviewId) {
+        if ((1 > reviewId) || (reviewId > rd.getNumOfReviews())) {
             return -1;
         }
-        String helpfulness = rd.getReviewHelpfulness(reviewId);
+        String helpfulness = rd.getReviewHelpfulness(reviewId - 1);
         String numerator = helpfulness.split("/")[0];
         return Integer.parseInt(numerator);
     }
@@ -66,10 +67,10 @@ public class IndexReader {
      *         Returns -1 if there is no review with the given identifier
      */
     public int getReviewHelpfulnessDenominator(int reviewId) {
-        if (rd.getNumOfReviews() <= reviewId) {
+        if ((1 > reviewId) || (reviewId > rd.getNumOfReviews())) {
             return -1;
         }
-        String helpfulness = rd.getReviewHelpfulness(reviewId);
+        String helpfulness = rd.getReviewHelpfulness(reviewId - 1);
         String denominator = helpfulness.split("/")[1];
         return Integer.parseInt(denominator);
     }
@@ -80,7 +81,8 @@ public class IndexReader {
      *         Returns -1 if there is no review with the given identifier
      */
     public int getReviewLength(int reviewId) {  // TODO: Check with Sara, we return duplicates
-        return (rd.getNumOfReviews() > reviewId) ? Integer.parseInt(rd.getTokensPerReview(reviewId)) : -1;
+        return ((1 <= reviewId) && (reviewId <= rd.getNumOfReviews())) ?
+                Integer.parseInt(rd.getTokensPerReview(reviewId - 1)) : -1;
     }
 
 
@@ -94,6 +96,9 @@ public class IndexReader {
      */
     public int getTokenFrequency(String token) {
         int i = tokenDict.searchTerm(token);
+        if (i < 0 || i >= tokenDict.getNumOfTerms()) {
+            return 0;
+        }
         long pos = tokenDict.table.getPostingPtr(i);
         return tokenDict.readLength(pos);
     }
@@ -105,7 +110,10 @@ public class IndexReader {
      */
     public int getTokenCollectionFrequency(String token) {
         int i = tokenDict.searchTerm(token);
-        return (i == -1) ? 0 : tokenDict.table.getFrequency(i);
+        if (i < 0 || i >= tokenDict.getNumOfTerms()) {
+            return 0;
+        }
+        return tokenDict.table.getFrequency(i);
     }
 
     /**
@@ -168,6 +176,9 @@ public class IndexReader {
      */
     private Enumeration<Integer> enumHelper(Dictionary dict, String term) {
         int i = dict.searchTerm(term);
+        if (i < 0 || i >= tokenDict.getNumOfTerms()) {
+            return new Vector<Integer>().elements();
+        }
         long pos = dict.table.getPostingPtr(i);
         long nextPos = (i + 1 < dict.getNumOfTerms()) ? dict.table.getPostingPtr(i + 1) : -1;
         Integer[] list = dict.read(pos, nextPos);

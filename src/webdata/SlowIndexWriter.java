@@ -13,7 +13,7 @@ public class SlowIndexWriter{
      * @param dir the directory in which all index files will be created if the directory does not exist, it should be
      *            created.
      */
-    public void slowWrite(String inputFile, String dir) {
+    public void slowWrite(String inputFile, String dir) { //  TODO: first, remove index
 //        ReviewsParser parser = new ReviewsParser();
 //        parser.parseFile(inputFile);
 //

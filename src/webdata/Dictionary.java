@@ -28,7 +28,8 @@ public class Dictionary implements Serializable {
         numOfBlocks = (int)Math.ceil(numOfTerms / (double)K);
         termPtr = new int[numOfBlocks];
         table = new TableOfContents(numOfTerms);
-        path = (isProduct) ? dir + "tempProduct" : dir + "tempToken";
+        // TODO: delete the folder
+        path = (isProduct) ? dir + "/testingFiles/tempProduct" : dir + "/testingFiles/tempToken";
 
         build(termDict);
     }
