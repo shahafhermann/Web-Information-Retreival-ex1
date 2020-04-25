@@ -1,6 +1,8 @@
 package webdata;
 
+import java.util.Arrays;
 import java.util.Enumeration;
+import java.util.Vector;
 
 /**
  *
@@ -19,8 +21,8 @@ public class IndexReader {
         //TODO: Read dictionaries from disk
         ReviewsParser parser = new ReviewsParser();
         parser.parseFile(dir);
-        tokenDict = new Dictionary(parser.getTokenDict(), false);
-        productDict = new Dictionary(parser.getProductDict(), true);
+        tokenDict = new Dictionary(parser.getTokenDict(), false, dir);
+        productDict = new Dictionary(parser.getProductDict(), true, dir);
         rd = new ReviewData(parser.getProductId(), parser.getReviewHelpfulness(), parser.getReviewScore(),
                             parser.getTokensPerReview(), parser.getNumOfReviews());
     }
@@ -90,9 +92,11 @@ public class IndexReader {
      * @return The number of reviews containing a given token (i.e., word)
      *         Returns 0 if there are no reviews containing this token
      */
-//    public int getTokenFrequency(String token) {
-//
-//    }
+    public int getTokenFrequency(String token) {
+        int i = tokenDict.searchTerm(token);
+        long pos = tokenDict.table.getPostingPtr(i);
+        return tokenDict.readLength(pos);
+    }
 
     /**
      * @param token The token to check.
@@ -112,9 +116,9 @@ public class IndexReader {
      *         Note that the integers should be sorted by id.
      *         Returns an empty Enumeration if there are no reviews containing this token.
      */
-//     public Enumeration<Integer> getReviewsWithToken(String token) {
-//
-//     }
+     public Enumeration<Integer> getReviewsWithToken(String token) {
+         return enumHelper(tokenDict, token);
+     }
 
 
      // --------------------------------------------------------- //
@@ -148,7 +152,27 @@ public class IndexReader {
      *         Note that the integers returned should be sorted by id.
      *         Returns an empty Enumeration if there are no reviews for this product.
      */
-//    public Enumeration<Integer> getProductReviews(String productId) {
-//
-//    }
+    public Enumeration<Integer> getProductReviews(String productId) {
+        return enumHelper(productDict, productId);
+    }
+
+
+    // ---------------------------------------------------------- //
+
+
+    /**
+     * Get the Enumaration list for the given Dictionary and term.
+     * @param dict Dictionary
+     * @param term Term
+     * @return Enumaration
+     */
+    private Enumeration<Integer> enumHelper(Dictionary dict, String term) {
+        int i = dict.searchTerm(term);
+        long pos = dict.table.getPostingPtr(i);
+        long nextPos = (i + 1 < dict.getNumOfTerms()) ? dict.table.getPostingPtr(i + 1) : -1;
+        Integer[] list = dict.read(pos, nextPos);
+
+        Vector<Integer> reviewsWithToken = new Vector<>(Arrays.asList(list));
+        return reviewsWithToken.elements();
+    }
 }

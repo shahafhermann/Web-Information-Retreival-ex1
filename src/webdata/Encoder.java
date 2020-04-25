@@ -57,10 +57,10 @@ public final class Encoder {
      * @param codeAsGap Indicate whether there's a gap difference
      * @return The corresponding int array.
      */
-    public static int[] decode(byte[] values, boolean codeAsGap) {
+    public static Integer[] decode(byte[] values, boolean codeAsGap, long[] ptr) {
         int size = byteArrayToInt(Arrays.copyOfRange(values, 0, 4));
         int numOfGroupsOfLastControlByte = size % 4;
-        int[] decoded = new int[size];
+        Integer[] decoded = new Integer[size];
         int groupCounter = 0;
         int[] groupSizes = new int[4];
         int groupIndex = 4; // First index of data
@@ -85,6 +85,7 @@ public final class Encoder {
             groupIndex += groupSize;
             ++groupCounter;
         }
+        ptr[0] = groupIndex;
         return decoded;
     }
 
