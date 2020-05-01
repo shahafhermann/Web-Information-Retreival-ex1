@@ -6,7 +6,7 @@ import java.util.*;
 public class main {
     public static void main(String[] args) throws IOException {
         String dir = "/Users/shahaf/Documents/UNI/אחזור מידע באינטרנט/ex1";
-        String file = "/100.txt";
+        String file = "/1000.txt";
 
         SlowIndexWriter siw = new SlowIndexWriter();
         siw.slowWrite(dir + file, dir);

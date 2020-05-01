@@ -145,9 +145,15 @@ public class IndexReader {
      * @return The number of tokens in the system (Tokens should be counted as many times as they appear).
      */
     public int getTokenSizeOfReviews() {
+//        int tokenCount = 0;
+//        for (int i = 0; i < tokenDict.getNumOfTerms(); ++i) {
+//            tokenCount += tokenDict.table.getFrequency(i);
+//        }
+//        return tokenCount;
+
         int tokenCount = 0;
-        for (int i = 0; i < tokenDict.getNumOfTerms(); ++i) {
-            tokenCount += tokenDict.table.getFrequency(i);
+        for (int i = 1; i <= getNumberOfReviews(); ++i) {
+            tokenCount += getReviewLength(i);
         }
         return tokenCount;
     }

@@ -78,12 +78,15 @@ public class ReviewsParser {
      */
     private void breakText(String text, int reviewId) {
         String[] tokens = text.split("[^A-Za-z0-9]+");
-        tokensPerReview.add(String.valueOf(tokens.length));
+//        tokensPerReview.add(String.valueOf(tokens.length));
+        int tokenCounter = 0;
         for (String token: tokens) {
             if (!token.isEmpty()) {
                 addTerm(tokenDict, token, reviewId);
+                ++tokenCounter;
             }
         }
+        tokensPerReview.add(String.valueOf(tokenCounter));
     }
 
     /**
