@@ -1,5 +1,6 @@
 package webdata;
 
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -13,7 +14,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class IndexReaderTest {
-//	final static String dir = "C:\\Users\\שגיב מיכאל\\Desktop\\WebInformationEx";
 	final static String indexDir = "/Users/shahaf/Documents/UNI/אחזור מידע באינטרנט/ex1/indexFiles";
 	final static String inputFile = "/Users/shahaf/Documents/UNI/אחזור מידע באינטרנט/ex1/1000.txt";
 	static private IndexReader indexReader;
@@ -185,12 +185,12 @@ class IndexReaderTest {
 
 	@Test
 	void getTokenSizeOfReviews(){
-		assertEquals(5981, indexReader.getTokenSizeOfReviews());
+		assertEquals(75447, indexReader.getTokenSizeOfReviews());
 	}
 
 //	/** uncomment for checking removeIndex method of slowWriter!. */
-//	@Test
-//	void removeDir(){
+//	@AfterAll
+//	static void removeDir(){
 //		indexWriter.removeIndex(indexDir);
 //		File directory = new File(indexDir);
 //		assertFalse(directory.exists());

@@ -1,15 +1,11 @@
 package webdata;
 
-import java.io.IOException;
-import java.io.RandomAccessFile;
-import java.lang.reflect.Array;
 import java.math.BigInteger;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.TreeMap;
 
-public final class Encoder {
+final class Encoder {
 
     /**
      * Empty and private constructor to make this class static.
@@ -22,7 +18,7 @@ public final class Encoder {
      * @param codeAsGap
      * @return
      */
-    public static ArrayList<Byte> encode(ArrayList<Integer> values, boolean codeAsGap) {
+    static ArrayList<Byte> encode(ArrayList<Integer> values, boolean codeAsGap) {
         int size = values.size();
         ArrayList<Byte> encoded = new ArrayList<>(padByte(intToByte(size)));
         int counter = 1;
@@ -57,7 +53,7 @@ public final class Encoder {
      * @param codeAsGap Indicate whether there's a gap difference
      * @return The corresponding int array.
      */
-    public static Integer[] decode(byte[] values, boolean codeAsGap, long[] ptr) {
+     static Integer[] decode(byte[] values, boolean codeAsGap, long[] ptr) {
         int size = byteArrayToInt(Arrays.copyOfRange(values, 0, 4));
         int numOfGroupsOfLastControlByte = size % 4;
         Integer[] decoded = new Integer[size];
@@ -98,7 +94,7 @@ public final class Encoder {
         int[] res = new int[4];
         byte slicer = 3;
         for (int i = 3; i >= 0; --i) {
-            res[i] = (b & slicer) + 1;  // TODO: remember that this doesnt include the remain (?)
+            res[i] = (b & slicer) + 1;
             b >>= 2;
         }
         return res;

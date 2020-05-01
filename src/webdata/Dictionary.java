@@ -7,15 +7,18 @@ import java.util.TreeMap;
 
 public class Dictionary implements Serializable {
 
-    public TableOfContents table;
+    private static final int K = 100;
+    private boolean isProduct;
+    private String concatStr = "";
+    private int[] termPtr;
+    private int numOfBlocks;
+    private int numOfTerms;
+    private String path;
 
-    static final int K = 100;
-    boolean isProduct;
-    String concatStr = "";
-    int[] termPtr;
-    int numOfBlocks;
-    int numOfTerms;
-    String path;
+    private int[] frequency;
+    private long[] postingPtr;
+    private byte[] length;
+    private byte[] prefixSize;
 
     /**
      * Constructor.
@@ -27,11 +30,15 @@ public class Dictionary implements Serializable {
         numOfTerms = termDict.size();
         numOfBlocks = (int)Math.ceil(numOfTerms / (double)K);
         termPtr = new int[numOfBlocks];
-        table = new TableOfContents(numOfTerms);
 
         path = (isProduct) ?
                 dir + File.separator + SlowIndexWriter.productPostingListFileName :
                 dir + File.separator + SlowIndexWriter.tokenPostingListFileName;
+
+        frequency = new int[numOfTerms];
+        postingPtr = new long[numOfTerms];
+        length = new byte[numOfTerms];
+        prefixSize = new byte[numOfTerms];
 
         build(termDict);
     }
@@ -39,7 +46,7 @@ public class Dictionary implements Serializable {
     /**
      * @return The number of terms in this dictionary (without duplicates)
      */
-    public int getNumOfTerms() {
+    int getNumOfTerms() {
         return numOfTerms;
     }
 
@@ -54,12 +61,12 @@ public class Dictionary implements Serializable {
         for (String term: termDict.keySet()) {  // For each token
             if (i % K == 0) {
                 termPtr[(i / K)] = concatStr.length();
-                table.setPrefixSize(i, (byte)0);
+                prefixSize[i] = 0;
                 concatStr = concatStr.concat(term);
             }
             else {
                 byte psize = findPrefix(prevTerm, term);
-                table.setPrefixSize(i, psize);
+                prefixSize[i] = psize;
                 concatStr = concatStr.concat(term.substring(psize));
             }
 
@@ -67,31 +74,31 @@ public class Dictionary implements Serializable {
 
             buildPostingList(termDict.get(term), i);
 
-            table.setLength(i, (byte) term.length());
+            length[i] = (byte) term.length();
             prevTerm = term;
             ++i;
         }
     }
 
     /**
-     * Populate the frequency data structure under TableOfContents.
+     * Populate the frequency data structure.
      * @param termData The data for the currently processed term
      * @param i Index to add at
      */
     private void buildFrequency(TreeMap<Integer, Integer> termData, int i) {
         Collection<Integer> allFrequencies = termData.values();
-        table.setFrequency(i, allFrequencies.stream().mapToInt(Integer::intValue).sum());  // Sum all values
+        frequency[i] =  allFrequencies.stream().mapToInt(Integer::intValue).sum();  // Sum all values
     }
 
     /**
-     * Populate the posting list data structure under TableOfContents.
+     * Populate the posting list data structure.
      * @param termData The data for the currently processed term
      * @param i Index to add at
      */
     private void buildPostingList(TreeMap<Integer, Integer> termData, int i) {
         ArrayList<Integer> reviews = new ArrayList<>(termData.keySet());
         ArrayList<Byte> encodedReviews = Encoder.encode(reviews, true);
-        table.setPostingPtr(i, write(encodedReviews));
+        postingPtr[i] =  write(encodedReviews);
         if (!isProduct) {
             ArrayList<Integer> frequencies = new ArrayList<>(termData.values());
             ArrayList<Byte> encodedFrequencies = Encoder.encode(frequencies, false);
@@ -124,7 +131,7 @@ public class Dictionary implements Serializable {
      * @param pos
      * @return
      */
-    public int readLength(long pos){
+    int readLength(long pos){
         try (RandomAccessFile raf = new RandomAccessFile(path, "rw")){
             raf.seek(pos);
             return raf.readInt();  // Read the first 4 bytes, hence the length of the wanted array
@@ -216,7 +223,7 @@ public class Dictionary implements Serializable {
      * @param term
      * @return
      */
-    public int searchTerm(String term) {
+    int searchTerm(String term) {
         return binarySearch(0, numOfBlocks - 1, term);
     }
 
@@ -229,7 +236,7 @@ public class Dictionary implements Serializable {
      */
     private int binarySearch(int left, int right, String term) {
         if (right == left) {
-            if (term.equals(concatStr.substring(termPtr[left], termPtr[left] + table.getLength(left * K))))
+            if (term.equals(concatStr.substring(termPtr[left], termPtr[left] + length[left * K])))
                 return left * K;
             return rangeSearch(left, term);
         }
@@ -239,18 +246,18 @@ public class Dictionary implements Serializable {
 
             // If the element is present at the
             // middle itself
-            if (term.equals(concatStr.substring(termPtr[mid], termPtr[mid] + table.getLength(mid * K))))
+            if (term.equals(concatStr.substring(termPtr[mid], termPtr[mid] + length[mid * K])))
                 return mid * K;
 
             // If element is smaller than mid, then
             // it can only be present in left subarray
-            if (term.compareTo(concatStr.substring(termPtr[mid], termPtr[mid] + table.getLength(mid * K))) < 0)
+            if (term.compareTo(concatStr.substring(termPtr[mid], termPtr[mid] + length[mid * K])) < 0)
                 return binarySearch(left, mid - 1, term);
 
             // Else the element can only be present
             // in right subarray
             if (term.compareTo(concatStr.substring(termPtr[mid + 1],
-                                                   termPtr[mid + 1] + table.getLength((mid + 1) * K))) < 0) {
+                                                   termPtr[mid + 1] + length[(mid + 1) * K])) < 0) {
                 return binarySearch(mid, mid, term);
             }
 
@@ -265,25 +272,33 @@ public class Dictionary implements Serializable {
     private int rangeSearch(int left, String term) {
         int basePtr = termPtr[left];
         int i = left * K ;
-        String prevTerm = concatStr.substring(basePtr, basePtr + table.getLength(i));
-        basePtr += table.getLength(i);
+        String prevTerm = concatStr.substring(basePtr, basePtr + length[i]);
+        basePtr += length[i];
 
         String curr;
         // Set the bound to fit the number of terms in the current block (starts at index left)
         int bound = ((left == termPtr.length - 1) && (numOfTerms - i < K)) ? numOfTerms : i + K;
         ++i;
         while (i < bound) {
-            curr = concatStr.substring(basePtr, basePtr + table.getLength(i) - table.getPrefixSize(i));
-            String prefix = prevTerm.substring(0, table.getPrefixSize(i));
+            curr = concatStr.substring(basePtr, basePtr + length[i] - prefixSize[i]);
+            String prefix = prevTerm.substring(0, prefixSize[i]);
             curr = prefix.concat(curr);
             if (term.equals(curr)) {
                 return i;
             }
 
             prevTerm = curr;
-            basePtr += table.getLength(i) - table.getPrefixSize(i);
+            basePtr += length[i] - prefixSize[i];
             ++i;
         }
         return -1;
+    }
+
+    int getFrequency(int i) {
+        return frequency[i];
+    }
+
+    long getPostingPtr(int i) {
+        return postingPtr[i];
     }
 }

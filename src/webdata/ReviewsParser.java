@@ -19,31 +19,29 @@ public class ReviewsParser {
     private ArrayList<String> tokensPerReview = new ArrayList<>();
     private int numOfReviews = 0;
 
-    public TreeMap<String, TreeMap<Integer, Integer>> getTokenDict() {
+    TreeMap<String, TreeMap<Integer, Integer>> getTokenDict() {
         return tokenDict;
     }
 
-    public TreeMap<String, TreeMap<Integer, Integer>> getProductDict() {
-        return productDict;
-    }
+    TreeMap<String, TreeMap<Integer, Integer>> getProductDict() { return productDict; }
 
-    public ArrayList<String> getReviewScore() {
+    ArrayList<String> getReviewScore() {
         return reviewScore;
     }
 
-    public ArrayList<String> getReviewHelpfulness() {
+    ArrayList<String> getReviewHelpfulness() {
         return reviewHelpfulness;
     }
 
-    public ArrayList<String> getProductId() {
+    ArrayList<String> getProductId() {
         return productId;
     }
 
-    public ArrayList<String> getTokensPerReview() {
+    ArrayList<String> getTokensPerReview() {
         return tokensPerReview;
     }
 
-    public int getNumOfReviews() { return numOfReviews;}
+    int getNumOfReviews() { return numOfReviews;}
 
     /**
      *

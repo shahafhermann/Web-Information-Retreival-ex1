@@ -3,7 +3,7 @@ package webdata;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class ReviewData implements Serializable {
+class ReviewData implements Serializable {
     private String[] productId;
     private short[] reviewHelpfulnessNumerator;
     private short[] reviewHelpfulnessDenominator;
@@ -58,17 +58,15 @@ public class ReviewData implements Serializable {
         }
     }
 
-    public byte getReviewScore(int i) { return reviewScore[i]; }
+    byte getScore(int i) { return reviewScore[i]; }
 
-    public short getReviewHelpfulnessNumerator(int i) { return reviewHelpfulnessNumerator[i]; }
+    short getHelpfulnessNumerator(int i) { return reviewHelpfulnessNumerator[i]; }
 
-    public short getReviewHelpfulnessDenominator(int i) { return reviewHelpfulnessDenominator[i]; }
+    short getHelpfulnessDenominator(int i) { return reviewHelpfulnessDenominator[i]; }
 
-    public String getProductId(int i) { return productId[i]; }
+    String getReviewProductId(int i) { return productId[i]; }
 
-    public short getTokensPerReview(int i) { return tokensPerReview[i]; }
+    short getTokensPerReview(int i) { return tokensPerReview[i]; }
 
-    public int getNumOfReviews() {
-        return numOfReviews;
-    }
+    int getNumOfReviews() { return numOfReviews; }
 }

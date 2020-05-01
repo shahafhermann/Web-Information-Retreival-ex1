@@ -44,7 +44,7 @@ public class IndexReader {
      *         Returns null if there is no review with the given identifier.
      */
     public String getProductId(int reviewId) {
-        return ((1 <= reviewId) && (reviewId <= rd.getNumOfReviews())) ? rd.getProductId(reviewId - 1) : null;
+        return ((1 <= reviewId) && (reviewId <= rd.getNumOfReviews())) ? rd.getReviewProductId(reviewId - 1) : null;
     }
 
     /**
@@ -54,7 +54,7 @@ public class IndexReader {
      */
     public int getReviewScore(int reviewId) {
         return ((1 <= reviewId) && (reviewId <= rd.getNumOfReviews())) ?
-                rd.getReviewScore(reviewId - 1) : -1;
+                rd.getScore(reviewId - 1) : -1;
     }
 
     /**
@@ -64,7 +64,7 @@ public class IndexReader {
      */
     public int getReviewHelpfulnessNumerator(int reviewId) {
         return ((1 <= reviewId) && (reviewId <= rd.getNumOfReviews())) ?
-                rd.getReviewHelpfulnessNumerator(reviewId - 1) : -1;
+                rd.getHelpfulnessNumerator(reviewId - 1) : -1;
     }
 
     /**
@@ -74,7 +74,7 @@ public class IndexReader {
      */
     public int getReviewHelpfulnessDenominator(int reviewId) {
         return ((1 <= reviewId) && (reviewId <= rd.getNumOfReviews())) ?
-                rd.getReviewHelpfulnessDenominator(reviewId - 1) : -1;
+                rd.getHelpfulnessDenominator(reviewId - 1) : -1;
     }
 
     /**
@@ -101,7 +101,7 @@ public class IndexReader {
         if (i < 0 || i >= tokenDict.getNumOfTerms()) {
             return 0;
         }
-        long pos = tokenDict.table.getPostingPtr(i);
+        long pos = tokenDict.getPostingPtr(i);
         return tokenDict.readLength(pos);
     }
 
@@ -115,7 +115,7 @@ public class IndexReader {
         if (i < 0 || i >= tokenDict.getNumOfTerms()) {
             return 0;
         }
-        return tokenDict.table.getFrequency(i);
+        return tokenDict.getFrequency(i);
     }
 
     /**
@@ -147,7 +147,7 @@ public class IndexReader {
     public int getTokenSizeOfReviews() {
 //        int tokenCount = 0;
 //        for (int i = 0; i < tokenDict.getNumOfTerms(); ++i) {
-//            tokenCount += tokenDict.table.getFrequency(i);
+//            tokenCount += tokenDict.getFrequency(i);
 //        }
 //        return tokenCount;
 
@@ -187,8 +187,8 @@ public class IndexReader {
         if (i < 0 || i >= tokenDict.getNumOfTerms()) {
             return new Vector<Integer>().elements();
         }
-        long pos = dict.table.getPostingPtr(i);
-        long nextPos = (i + 1 < dict.getNumOfTerms()) ? dict.table.getPostingPtr(i + 1) : -1;
+        long pos = dict.getPostingPtr(i);
+        long nextPos = (i + 1 < dict.getNumOfTerms()) ? dict.getPostingPtr(i + 1) : -1;
         Integer[] list = dict.read(pos, nextPos);
 
         Vector<Integer> reviewsWithToken = new Vector<>(Arrays.asList(list));
