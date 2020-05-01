@@ -13,6 +13,8 @@ public class main {
         IndexReader ir = new IndexReader(dir);
 
         test1(ir);
+
+//        siw.removeIndex(dir);
     }
 
     private static void test1(IndexReader ir) {
