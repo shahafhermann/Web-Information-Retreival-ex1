@@ -1,7 +1,4 @@
-# Web-Information-Retreival-ex1
-
-### Creators
-This project was designed and coded by @shahafhermann and @zoharachdut
+# Web Information Retreival - ex1
 
 ### Analysis
 
