@@ -1,0 +1,2584 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "David"
+\font_sans "default" "David"
+\font_typewriter "default" "David"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 3cm
+\rightmargin 2cm
+\bottommargin 5cm
+\headheight 3cm
+\headsep 3cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\begin_inset Formula $IML$
+\end_inset
+
+ - תרגיל
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\end_layout
+
+\begin_layout Author
+שם: שחף הרמן 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ת.ז.:
+\family roman
+\series medium
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+308156983
+\end_layout
+
+\begin_layout Subsection*
+שאלה
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+יהי 
+\begin_inset Formula $w\in Ker\left(X^{T}\right)$
+\end_inset
+
+.
+ אז 
+\begin_inset Formula $X^{T}w=0$
+\end_inset
+
+, נכפיל ב- 
+\begin_inset Formula $X$
+\end_inset
+
+ את שני האגפים ונקבל 
+\begin_inset Formula $XX^{T}w=0$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $w\in Ker\left(XX^{T}\right)$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $Ker\left(X^{T}\right)\subseteq Ker\left(XX^{T}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\blacksquare
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+שאלה
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+יהי 
+\begin_inset Formula $x\in Im\left(A^{T}\right)$
+\end_inset
+
+, אז קיים 
+\begin_inset Formula $u\in\mathbb{R}^{d}$
+\end_inset
+
+ כך ש- 
+\begin_inset Formula $A^{T}\cdot u=x$
+\end_inset
+
+.
+ נשים לב שלכל 
+\begin_inset Formula $y\in Ker(A)$
+\end_inset
+
+ מתקיים:
+\begin_inset Formula 
+\[
+\left\langle x,y\right\rangle =x^{T}\cdot y=\left(A^{T}\cdot u\right)^{T}\cdot y=u^{T}\cdot A\cdot y=u^{T}\cdot0=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כאשר השוויון הלפני אחרון נובע מכך ש- 
+\begin_inset Formula $y\in Ker(A)$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $A\cdot y=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מכאן נובע ש- 
+\begin_inset Formula $x\in Ker(A)^{\bot}$
+\end_inset
+
+ מההגדרה ולכן 
+\begin_inset Formula $Im\left(A^{T}\right)\subseteq Ker\left(A\right)^{\bot}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+בכיוון השני, יהי 
+\begin_inset Formula $x\in Im\left(A^{T}\right)^{\bot}$
+\end_inset
+
+, אז לכל 
+\begin_inset Formula $y\in Im\left(A^{T}\right)$
+\end_inset
+
+ מתקיים ש- 
+\begin_inset Formula $\left\langle x,y\right\rangle =0$
+\end_inset
+
+, ובפרט עבור 
+\begin_inset Formula $A^{T}\left(A\cdot x\right)\in Im\left(A^{T}\right)$
+\end_inset
+
+.
+ כעת נקבל:
+\begin_inset Formula 
+\[
+\left\langle A^{T}\left(A\cdot x\right),x\right\rangle =0\Longrightarrow\left\langle A^{T}\left(A\cdot x\right),x\right\rangle =\left(A^{T}A\cdot x\right)^{T}\cdot x=x^{T}A^{T}Ax=\left\langle Ax,Ax\right\rangle =0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נזכור ש- 
+\begin_inset Formula $\left\langle z,z\right\rangle =0\Longrightarrow z=0$
+\end_inset
+
+ ומכאן ש- 
+\begin_inset Formula $Ax=0$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $x\in Ker(A)$
+\end_inset
+
+, ולכן 
+\begin_inset Formula $Im\left(A^{T}\right)^{\bot}\subseteq ker(A)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+כעת עבור 
+\begin_inset Formula $U,V\subseteq\mathbb{R}^{n}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $U\subseteq V\Longrightarrow V^{\bot}\subseteq U^{\bot}$
+\end_inset
+
+, ולכן 
+\begin_inset Formula $Ker(A)^{\bot}\subseteq\left(Im\left(A^{T}\right)^{\bot}\right)^{\bot}=Im\left(A^{T}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+הראינו הכלה דו כיוונית ולכן 
+\begin_inset Formula $Im\left(A^{T}\right)=Ker(A)^{\bot}$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\blacksquare
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+שאלה
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נרצה להראות שלמערכת המשוואות 
+\begin_inset Formula $y=X^{T}w$
+\end_inset
+
+ יש אינסוף פתרונות אם
+\begin_inset Quotes erd
+\end_inset
+
+ם 
+\begin_inset Formula $y\bot Ker(X)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+נניח שלמערכת המשוואות 
+\begin_inset Formula $y=X^{T}w$
+\end_inset
+
+ הנתונה אינסוף פתרונות.
+\end_layout
+
+\begin_layout Standard
+מכאן, קיים 
+\begin_inset Formula $v\in\mathbb{R}^{d}$
+\end_inset
+
+ כך ש- 
+\begin_inset Formula $X^{T}v=b$
+\end_inset
+
+ 
+\begin_inset Formula $\Longleftarrow$
+\end_inset
+
+ 
+\begin_inset Formula $b\in Im\left(X^{T}\right)$
+\end_inset
+
+.
+ מהשאלה הקודמת נוכל להסיק ש- 
+\begin_inset Formula $b\in Ker\left(X\right)^{\bot}$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $b\bot Ker(X)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+בכיוון השני, נניח ש- 
+\begin_inset Formula $b\bot Ker(X)$
+\end_inset
+
+.
+ כלומר, מתקיים 
+\begin_inset Formula $b\in Ker(X)^{\bot}$
+\end_inset
+
+.
+ מהשאלה הקודמת נדע שזה גורר ש- 
+\begin_inset Formula $b\in Im\left(X^{T}\right)$
+\end_inset
+
+.
+ לכן, קיים 
+\begin_inset Formula $v\in\mathbb{R}^{d}$
+\end_inset
+
+ כך ש- 
+\begin_inset Formula $X^{T}v=b$
+\end_inset
+
+.
+ נניח בשלילה שלמערכת יש פתרון יחיד.
+ אז עבור כל 
+\begin_inset Formula $x,y\in\mathbb{R}^{d}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $X^{T}x=X^{T}y=b$
+\end_inset
+
+
+\begin_inset Formula $\Longleftrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $x=y$
+\end_inset
+
+.
+ מכאן נקבל ש- 
+\begin_inset Formula $X^{T}\left(x-y\right)=0\Longleftrightarrow x-y=0$
+\end_inset
+
+, אבל אז נקבל 
+\begin_inset Formula $Ker\left(x^{T}\right)=0$
+\end_inset
+
+ שאומר ש- 
+\begin_inset Formula $X^{T}$
+\end_inset
+
+ הפיכה, בסתירה לנתון.
+ לכן למערכת המשוואות יש אינסוף פתרונות.
+\begin_inset Formula 
+\[
+\blacksquare
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+שאלה
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נסמן 
+\begin_inset Formula $A=XX^{T}$
+\end_inset
+
+, 
+\begin_inset Formula $b=Xy$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+- אם 
+\begin_inset Formula $A$
+\end_inset
+
+ לא הפיכה: משאלות
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ו-
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+נדע ש- 
+\begin_inset Formula $b\in Im(A)=Ker\left(A^{T}\right)^{\bot}$
+\end_inset
+
+ 
+\begin_inset Formula $\Longleftrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $b\bot Ker\left(A^{T}\right)$
+\end_inset
+
+ 
+\begin_inset Formula $\Longleftrightarrow$
+\end_inset
+
+ למערכת יש אינסוף פתרונות.
+\end_layout
+
+\begin_layout Standard
+- אם 
+\begin_inset Formula $A$
+\end_inset
+
+ הפיכה: נניח בשלילה שלמערכת יש אינסוף פתרונות.
+ אז קיימים 
+\begin_inset Formula $u,v\in\mathbb{R}^{d}$
+\end_inset
+
+ כך ש- 
+\begin_inset Formula $u\neq v$
+\end_inset
+
+ וגם:
+\begin_inset Formula 
+\[
+Au=Av=b\Longrightarrow A(u-v)=0\Longrightarrow u-v\in Ker(A)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+וגם 
+\begin_inset Formula $u-v\neq0$
+\end_inset
+
+.
+ אז נקבל 
+\begin_inset Formula $Ker(A)\neq0$
+\end_inset
+
+, בסתירה לכך שהיא הפיכה.
+\begin_inset Formula 
+\[
+\blacksquare
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+שאלה
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+5
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+א.
+
+\series default
+ על מנת להראות ש- 
+\begin_inset Formula $P$
+\end_inset
+
+ סימטרית מספיק להראות שעבור כל 
+\begin_inset Formula $1\leq i,j\leq d$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $P_{i,j}=P_{Ji}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+עבור הסימון 
+\begin_inset Formula $P=\stackrel[l=1]{k}{\sum}v_{l}v_{l}^{T}$
+\end_inset
+
+, אם נסמן גם 
+\begin_inset Formula $v_{l}=\left(v_{l1},v_{l2},\dots,v_{ld}\right)$
+\end_inset
+
+ עבור 
+\begin_inset Formula $1\leq l\leq k$
+\end_inset
+
+ , נבין איך נראית המטריצה 
+\begin_inset Formula $v_{l}v_{l}^{T}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+v_{l}v_{l}^{T}=\begin{pmatrix}v_{l1}\\
+\vdots\\
+v_{lk}
+\end{pmatrix}\left(v_{l1},\dots,v_{lk}\right)=\begin{pmatrix}v_{l1}v_{l1} & \cdots & v_{l1}v_{ld}\\
+\vdots & \ddots & \vdots\\
+v_{ld}v_{l1} & \cdots & v_{ld}v_{ld}
+\end{pmatrix}\Longrightarrow\left(v_{l}v_{l}^{T}\right)_{ij}=v_{li}v_{lj}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ומכאן נקבל:
+\begin_inset Formula 
+\[
+P_{ij}=\sum_{l=1}^{k}v_{li}v_{li}=\sum_{l=1}^{k}v_{lj}v_{li}=P_{ji}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כלומר 
+\begin_inset Formula $P$
+\end_inset
+
+ סימטרית כנדרש.
+\begin_inset Formula 
+\[
+\blacksquare
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+ב.
+
+\series default
+ נוכיח שהוקטורים 
+\begin_inset Formula $v_{1},v_{2},\dots,v_{k}$
+\end_inset
+
+ הם וקטורים עצמיים של 
+\begin_inset Formula $P$
+\end_inset
+
+, כולם עם ע
+\begin_inset Quotes erd
+\end_inset
+
+ע 
+\begin_inset Formula $1$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+לכל 
+\begin_inset Formula $1\leq i\leq k$
+\end_inset
+
+ מתקיים:
+\begin_inset Formula 
+\[
+Pv_{i}=\left(\sum_{j=1}^{k}v_{j}v_{j}^{T}\right)v_{i}=v_{1}v_{1}^{T}v_{i}+\cdots+v_{k}v_{k}^{T}v_{i}=*
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נזכור כי 
+\begin_inset Formula $v_{1},\dots,v_{k}$
+\end_inset
+
+ מהווים בסיס אורתונורמלי ולכן לכל 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $v_{i}^{T}v_{j}=0$
+\end_inset
+
+ וכן 
+\begin_inset Formula $v_{i}^{T}v_{i}=1$
+\end_inset
+
+.
+ לכן:
+\begin_inset Formula 
+\[
+*=v_{1}\cdot0+v_{2}\cdot0+\cdots+v_{i}\cdot1+\cdots+v_{k}\cdot0=v_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כלומר, 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ הוא ו
+\begin_inset Quotes erd
+\end_inset
+
+ע של 
+\begin_inset Formula $P$
+\end_inset
+
+ עם הע
+\begin_inset Quotes erd
+\end_inset
+
+ע
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+לכל 
+\begin_inset Formula $1\leq i\leq k$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\blacksquare
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+ג.
+
+\series default
+ נזכור ש- 
+\begin_inset Formula $v_{1},\dots v_{d}$
+\end_inset
+
+ הוא בסיס של 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ נסמן כל 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ ע
+\begin_inset Quotes erd
+\end_inset
+
+י 
+\begin_inset Formula $v=a_{1}v_{1}+\cdots+a_{d}v_{d}$
+\end_inset
+
+, כאשר לכל 
+\begin_inset Formula $1\leq i\le d$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $a_{i}\in\mathbb{R}$
+\end_inset
+
+.
+ אזי:
+\begin_inset Formula 
+\[
+Pv=\left(\sum_{i=1}^{k}v_{i}v_{i}^{T}\right)\left(a_{1}v_{1}+\cdots+a_{d}v_{d}\right)=\sum_{i=1}^{k}v_{i}v_{i}^{T}a_{1}v_{1}+\cdots+v_{i}v_{i}^{T}a_{i}v_{i}+\cdots+v_{i}v_{i}^{T}a_{d}v_{d}=
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\sum_{i=1}^{k}a_{1}v_{i}v_{i}^{T}v_{1}+\cdots+a_{i}v_{i}v_{i}^{T}v_{i}+\cdots+a_{d}v_{i}v_{i}^{T}v_{d}=
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\sum_{i=1}^{k}a_{1}v_{i}\cdot0+\cdots+a_{i}v_{i}\cdot1+\cdots a_{d}v_{i}\cdot0=\sum_{i=1}^{k}a_{i}v_{i}=v
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\blacksquare
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+ד.
+
+\series default
+ 
+\begin_inset Formula 
+\[
+P^{2}=UDU^{T}UDU^{T}=UDDU^{T}=UDU^{T}=P
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\blacksquare
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+ה.
+
+\series default
+ 
+\begin_inset Formula 
+\[
+\left(I-P\right)P=\left(UIU^{T}-UDU^{T}\right)UDU^{T}=U\left(I-D\right)U^{T}UDU^{T}=
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=U\left(I-D\right)DU^{T}=U\left(D-D\right)U^{T}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\blacksquare
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+שאלה
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+6
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+א.
+
+\series default
+ 
+\begin_inset Formula 
+\[
+\left(XX^{T}\right)^{-1}=\left(\left(U\Sigma V^{T}\right)\left(V\Sigma^{T}U^{T}\right)\right)^{-1}=\left(U\Sigma I\Sigma^{T}U^{T}\right)^{-1}=\left(UDU^{T}\right)^{-1}=
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\left(U^{T}\right)^{-1}D^{-1}U^{-1}=UD^{-1}U^{T}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כעת מכך נסיק כי גם 
+\begin_inset Formula $D$
+\end_inset
+
+ הפיכה ולכן:
+\begin_inset Formula 
+\[
+\left(XX^{T}\right)^{-1}X=UD^{-1}U^{T}U\Sigma V^{T}=UD^{-1}\Sigma V^{T}=*
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כעת:
+\begin_inset Formula 
+\[
+D=\Sigma\Sigma^{T}=d\updownarrow\overset{\overset{m}{\longleftrightarrow}}{\begin{pmatrix}\sigma_{1}\\
+ & \ddots\\
+ &  & \sigma_{n}
+\end{pmatrix}}\overset{\overset{d}{\longleftrightarrow}}{\begin{pmatrix}\sigma_{1}\\
+ & \ddots\\
+ &  & \sigma_{n}
+\end{pmatrix}}\updownarrow m=d\updownarrow\overset{\overset{d}{\longleftrightarrow}}{\begin{pmatrix}\sigma_{1}^{2}\\
+ & \ddots\\
+ &  & \sigma_{n}^{2}
+\end{pmatrix}}\Longrightarrow
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Longrightarrow D^{-1}=d\updownarrow\overset{\overset{d}{\longleftrightarrow}}{\begin{pmatrix}\frac{1}{\sigma_{1}^{2}}\\
+ & \ddots\\
+ &  & \frac{1}{\sigma_{n}^{2}}
+\end{pmatrix}}\Longrightarrow D^{-1}\Sigma=d\updownarrow\overset{\overset{d}{\longleftrightarrow}}{\begin{pmatrix}\frac{1}{\sigma_{1}^{2}}\\
+ & \ddots\\
+ &  & \frac{1}{\sigma_{n}^{2}}
+\end{pmatrix}}\overset{\overset{m}{\longleftrightarrow}}{\begin{pmatrix}\sigma_{1}\\
+ & \ddots\\
+ &  & \sigma_{n}
+\end{pmatrix}}\updownarrow d=\overset{\overset{m}{\longleftrightarrow}}{\begin{pmatrix}\frac{1}{\sigma_{1}}\\
+ & \ddots\\
+ &  & \frac{1}{\sigma_{n}}
+\end{pmatrix}}\updownarrow d=\Sigma^{\dagger}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ולכן:
+\begin_inset Formula 
+\[
+*=U\Sigma^{\dagger}V^{T}=\left(V\Sigma^{\dagger}U^{T}\right)^{T}=\left(X^{\dagger}\right)^{T}=X^{T\dagger}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\blacksquare
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+שאלה
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+7
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נסמן:
+\begin_inset Formula 
+\[
+X^{T}=\begin{pmatrix}| & \cdots & |\\
+y_{1} & \cdots & y_{d}\\
+| & \cdots & |
+\end{pmatrix}=\begin{pmatrix}- & x_{1} & -\\
+\vdots & \vdots & \vdots\\
+- & x_{m} & -
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נעזר בעובדה שניתנה לנו בתחילת השאלה ונסיק ש- 
+\begin_inset Formula $Ker\left(XX^{T}\right)\Longleftrightarrow Ker\left(X^{T}\right)=0$
+\end_inset
+
+ 
+\begin_inset Formula $\Longleftrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $XX^{T}$
+\end_inset
+
+ הפיכה.
+\end_layout
+
+\begin_layout Standard
+כעת:
+\begin_inset Formula 
+\[
+Ker\left(X^{T}\right)=0\Longleftrightarrow z_{1}y_{1}+\cdots+z_{d}y_{d}=\begin{pmatrix}| & \cdots & |\\
+y_{1} & \cdots & y_{d}\\
+| & \cdots & |
+\end{pmatrix}z=0\Longleftrightarrow z=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כלומר באגף ימין אנו דורשים ש- 
+\begin_inset Formula $z_{1}=\cdots=z_{d}=0$
+\end_inset
+
+.
+ זה קורה אם
+\begin_inset Quotes erd
+\end_inset
+
+ם 
+\begin_inset Formula $y_{1},\dots,y_{d}$
+\end_inset
+
+ בת
+\begin_inset Quotes erd
+\end_inset
+
+ל, כלומר 
+\begin_inset Formula $Span\left(y_{1},\dots,y_{d}\right)=\mathbb{R}^{d}$
+\end_inset
+
+, ומשום שדרגת העמודות שווה לדרגת השורות זה קורה אם
+\begin_inset Quotes erd
+\end_inset
+
+ם 
+\begin_inset Formula $Span\left(x_{1},\dots,x_{m}\right)=\mathbb{R}^{d}$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\blacksquare
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+שאלה
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+8
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+יהיו 
+\begin_inset Formula $w_{1},w_{2}\in\mathbb{R}^{d}$
+\end_inset
+
+ שני פתרונות.
+ הראינו בתרגול כי מתקיים:
+\begin_inset Formula 
+\[
+DU^{T}w_{1}=DU^{T}w_{2}=\Sigma V^{T}y\Longrightarrow DU^{T}\left(w_{1}-w_{2}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נשים לב ש- 
+\begin_inset Formula $U$
+\end_inset
+
+ מטריצה אורתונורמלית בגודל 
+\begin_inset Formula $d\times d$
+\end_inset
+
+, ולכן העמודות שלה 
+\begin_inset Formula $u_{1},\dots,u_{d}$
+\end_inset
+
+ מהוות בסיס אורתונורמלי של 
+\begin_inset Formula $\mathbb{R}^{d}$
+\end_inset
+
+, לכן קיימים סקלרים 
+\begin_inset Formula $\alpha_{1},\dots,\alpha_{d},\beta_{1},\dots,\beta_{d}\in\mathbb{R}$
+\end_inset
+
+ המקיימים:
+\begin_inset Formula 
+\[
+w_{1}=\sum_{i=1}^{d}\alpha_{i}u_{i}\,\,,\,\,w_{2}=\sum_{i=1}^{d}\beta_{i}u_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+לכן נקבל:
+\begin_inset Formula 
+\[
+DU^{T}\sum_{i=1}^{d}\left(\alpha_{i}=\beta_{i}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+משום ש- 
+\begin_inset Formula $D$
+\end_inset
+
+ מטריצה אלכסונית, מתקבל שהקוארדינטה ה- 
+\begin_inset Formula $j$
+\end_inset
+
+ בוקטור המתקבל היא:
+\begin_inset Formula 
+\[
+\left[DU^{T}\sum_{i=1}^{d}\left(\alpha_{i}=\beta_{i}\right)\right]_{j}=d_{j}u_{j}^{T}\left(\sum_{i=1}^{d}\left(\alpha_{i}=\beta_{i}\right)\right)=d_{j}\left(\sum_{i=1}^{d}\left(\alpha_{i}=\beta_{i}\right)u_{j}^{T}u_{j}\right)\underset{(*)}{\underset{\uparrow}{=}}d_{j}\left(a_{j}-\beta_{j}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+)*( 
+\begin_inset Formula $U$
+\end_inset
+
+ אורתונורמלית.
+\end_layout
+
+\begin_layout Standard
+וזאת כאשר 
+\begin_inset Formula $d_{j}$
+\end_inset
+
+ הוא הערך הסינגולרי ה- 
+\begin_inset Formula $j$
+\end_inset
+
+ בריבוע, כלומר האיבר ה- 
+\begin_inset Formula $j$
+\end_inset
+
+ באלכסון של 
+\begin_inset Formula $D$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+נניח כי ל- 
+\begin_inset Formula $X$
+\end_inset
+
+ יש 
+\begin_inset Formula $r$
+\end_inset
+
+ ערכים סינגולריים, אז במטריצה 
+\begin_inset Formula $D$
+\end_inset
+
+ עבור 
+\begin_inset Formula $j>r$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $d_{j}=0$
+\end_inset
+
+ ו- 
+\begin_inset Formula $\forall j\leq r:d_{j}\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+אז נסיר כי כל פתרון חוקי מקיים לכל 
+\begin_inset Formula $j\leq r$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+d_{j}\left(\alpha_{j}-\beta_{j}\right)=0\Longrightarrow\alpha_{j}=\beta_{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+בעוד לכל 
+\begin_inset Formula $j>r$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\forall\alpha_{j},\beta_{j}\in\mathbb{R}:d_{j}\left(\alpha_{j}-\beta_{j}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+את המקדמים הקבועים בכל פתרון חוקי נסמן כך: 
+\begin_inset Formula $a_{1},\dots,a_{r}$
+\end_inset
+
+, אזי קבוצת הפתרונות החוקיים הינה:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+W=\left\{ U\cdot\begin{bmatrix}\beta_{1}\\
+\vdots\\
+\beta_{d}
+\end{bmatrix}\vert\forall i\leq r:\beta_{i}=\alpha_{i}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+לכן, כל 
+\begin_inset Formula $\bar{w}\in W$
+\end_inset
+
+ מקיים:
+\begin_inset Formula 
+\[
+\|\bar{w}\|^{2}=\sum_{i=1}^{d}\left(\sum_{i=1}^{d}\beta_{j}u_{i}^{j}\right)^{2}=\sum_{i=1}^{d}\left\langle \beta,u_{i}\right\rangle ^{2}=*
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כעת, נשתמש במשפט 
+\begin_inset Formula $Bessel$
+\end_inset
+
+ ונקבל:
+\begin_inset Formula 
+\[
+\|\beta\|^{2}=\sum_{i=1}^{d}\beta_{i}^{2}=\sum_{i=1}^{r}a_{i}+\sum_{i=r+1}^{d}\beta_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נשים לב ש-
+\begin_inset Formula 
+\[
+\overset{\wedge}{w}=X^{\dagger^{T}}=U\Sigma^{\dagger T}V^{T}y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+משום ש- 
+\begin_inset Formula $\overset{\wedge}{w}$
+\end_inset
+
+ הוא פתרון חוקי, 
+\begin_inset Formula $r$
+\end_inset
+
+ הקוארדינטות הראשונות שלו הן 
+\begin_inset Formula $a_{1},\dots,a_{r}$
+\end_inset
+
+ ואז נקבל:
+\begin_inset Formula 
+\[
+\overset{\wedge}{w}=\begin{bmatrix}a_{1}\\
+\vdots\\
+a_{r}\\
+0\\
+\vdots\\
+0
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+לפי כל האמור לעיל, נסיק:
+\begin_inset Formula 
+\[
+\|\overset{\wedge}{w}\|^{2}=\left|\left|U\cdot\begin{bmatrix}a_{1}\\
+\vdots\\
+a_{r}\\
+0\\
+\vdots\\
+0
+\end{bmatrix}\right|\right|^{2}=\sum_{i=1}^{d}a_{i}^{2}\leq\sum_{i=1}^{r}a_{i}^{2}+\sum_{i=r+1}^{d}\beta_{i}^{2}=\|\bar{w}\|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\blacksquare
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+שאלה
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+13
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ראית אציין מה עשיתי בתהליך ה- 
+\begin_inset Formula $preprocess$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+- מחקתי ידנית מהקובץ שורות המכילות ערכים לא הגיוניים, כמו ערכים שליליים
+ שלא אמורים להיות שליליים )מחיר, שטח וכו'(, דגימות עם 
+\begin_inset Formula $id$
+\end_inset
+
+ זהה, ערכי 
+\begin_inset Formula $nan$
+\end_inset
+
+, דגימות עם
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+חדרי שינה או חדרי רחצה וכו'.
+\end_layout
+
+\begin_layout Standard
+- מחקתי שורות בהן תאריך השיפוץ קטן מתאריך הבנייה, ושורות בהן השטח מעל לפני
+ האדמה + השטח מתחת קטן משטח המחיה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+התמודדותי עם משתנים קטגוריאליים באמצעות כלי ה- 
+\begin_inset Formula $dummies$
+\end_inset
+
+ של ספריית 
+\begin_inset Formula $pandas$
+\end_inset
+
+.
+ המשתנים הקטגוריאליים שמצאתי היו 
+\begin_inset Formula $zipcode$
+\end_inset
+
+ ו- 
+\begin_inset Formula $date$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\blacksquare
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+שאלה
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+15
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נוכל לפי הערכים הסינגולריים למצוא פיצ'רים שהם בעלי תיאום גבוה )
+\begin_inset Formula $highly\,correlated$
+\end_inset
+
+(.
+ לפי הנתונים שהתקבלו אצלי, ניתן לראות כי המטריצה קרובה לסינגולרית שכן הערכים
+ האחרונים במטריצה קרובים מאוד ל-
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\numeric off
+.
+\begin_inset Formula 
+\[
+\blacksquare
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+שאלה
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+16
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+א.
+
+\series default
+ 
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../../IML/ex2/ex2_q16.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\blacksquare
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+ב.
+
+\series default
+ ניתן להבחין כי ככל שמשתמשים ביותר דגימות לאימון המודלים כך השגיאה )ה- 
+\begin_inset Formula $MSE$
+\end_inset
+
+( המתקבלת קטנה ושואפת ל-
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+\begin_inset Formula 
+\[
+\blacksquare
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+שאלה
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+17
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+להלן שניים מהפיצ'רים עבורם ביצעתי את החישוב:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../../IML/ex2/ex2_q17_a.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Graphics
+	filename ../../IML/ex2/ex2_q17_b.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+קל לראות כי הגרף הימני )עבור פיצ'ר הדירוג(, תורם מאוד למודל וברור כי ככל
+ שהדירוג גבוה יותר כך גם המחיר.
+\end_layout
+
+\begin_layout Standard
+לעומת זאת, רואים כי בגרף השמאלי )עבור פיצ'ר שנת הבניה(, אין תרומה גדולה
+ למודל שכן שנת הבניה לא משפיעה באופן ניכר על המחיר.
+\begin_inset Formula 
+\[
+\blacksquare
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+שאלה
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+21
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../../IML/ex2/ex2_q21_a.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Graphics
+	filename ../../IML/ex2/ex2_q21_b.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\blacksquare
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+שאלה
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+22
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+בסעיפים הקודמים לקחנו מידע שמתפלג באופן אקספוננציאלי והכלנו אותו עלח מודל
+ לינארית, זאת ע״י פתירת בעיה מקבילה לה - לקיחת 
+\begin_inset Formula $\log$
+\end_inset
+
+ על ערכי ה- 
+\begin_inset Formula $deteected$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+באופן זה, ע
+\begin_inset Quotes erd
+\end_inset
+
+י פתרון הבעיה המקבילה לה קיבלנו את 
+\begin_inset Formula $\hat{y}$
+\end_inset
+
+.
+ נשים לב שע
+\begin_inset Quotes erd
+\end_inset
+
+י הפעלת 
+\begin_inset Formula $exp$
+\end_inset
+
+ על 
+\begin_inset Formula $\hat{y}$
+\end_inset
+
+, הצלחנו לחזור לבעיה האקספוננציאלית.
+\end_layout
+
+\begin_layout Standard
+כלומר, קיבלנו שערוך של הערכים האקספוננציאלים.
+ בנוסף, מכך ש- 
+\begin_inset Formula $y_{i}=\exp\left(\left\langle w,x\right\rangle \right)$
+\end_inset
+
+ נוכל לכתוב את 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ בתור 
+\begin_inset Formula $\log(y_{i})=\left\langle w,x\right\rangle $
+\end_inset
+
+ והצלחנו לקבל משהו לינארי שאותו ניתן לשערך בצורה טובה יותר.
+\end_layout
+
+\begin_layout Standard
+אזי, מכך שהמכפלה הפנימית של 
+\begin_inset Formula $\left\langle w,x\right\rangle $
+\end_inset
+
+ בפונקציית ה- 
+\begin_inset Formula $loss$
+\end_inset
+
+ עם 
+\begin_inset Formula $\log(y)$
+\end_inset
+
+ משערכת את 
+\begin_inset Formula $\log(y)$
+\end_inset
+
+, נשתמש בחוקי האקספוננט ונקבל:
+\begin_inset Formula 
+\[
+L_{\exp}\left(f_{x}(x,y)\right)=\left(\left\langle w,x\right\rangle -\log\left(\hat{y}\right)\right)^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\exp\left(\left\langle w,x\right\rangle \right)\approx y\Longleftrightarrow\log\left(\exp\left(\left\langle w,x\right\rangle \right)\right)\approx\log(y)\Longleftrightarrow\left\langle w,x\right\rangle \approx\log(y)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ולכן פונקציית ה- 
+\begin_inset Formula $loss$
+\end_inset
+
+ שנרצה הינה:
+\begin_inset Formula 
+\[
+L_{\exp}\left(f_{x}\left(x,y\right)\right)=\left(\exp\left\langle w,x\right\rangle -y\right)^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\blacksquare
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

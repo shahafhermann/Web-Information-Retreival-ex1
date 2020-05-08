@@ -32,20 +32,18 @@ Frequency now represents the number of reviews that refer a given product ID.
 
 2. When creating an IndexReader, we load into main memory both dictionaries and the review meta-data, but keep storing the posting lists for both dictionaries on disk.
 
-3. Let's denote n = number of reviews, we have:
-    - The size of the table of review data is n*(`short` + `short` + `short` + `byte`) = 7n bytes.
-    The `String` of the review meta-data has exactly 10n chars (assuming each product ID is composed of 10 letters).
-    Overhead of a `String` in Java has 4B for the pointer of the array of chars, 8B header, 4B offset, 4B length of the `String`, 4B hashcode, the char array is of size: 8B header, 4B length and 10n*sizeof(char), padding. Together it sums to ~(36 + 20n) bytes.
+3. Let's denote `n = number of reviews`, we have:
+    - The size of the table of review data is: ![](https://latex.codecogs.com/svg.latex?%5Cinline%20n%5Ccdot%5Cleft%28short&plus;short&plus;short&plus;byte%5Cright%29%3D7n) `byte`s.
+    The `String` of the review meta-data has exactly ![](https://latex.codecogs.com/svg.latex?%5Cinline%2010%5Ccdot%20n) `char`s (assuming each product ID is composed of 10 letters).
+    Overhead of a `String` in Java has `4B` for the pointer of the array of chars, `8B` header, `4B` offset, `4B` length of the `String`, `4B` hashcode, the `char` array is of size: `8B` header, `4B` length and ![](https://latex.codecogs.com/svg.latex?%5Cinline%2010%5Ccdot%20n%5Ccdot%20sizeOf%5Cleft%28char%5Cright%29) padding. Together it sums to ![](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Csim%2836&plus;20%5Ccdot%20n%29) `byte`s.
    
-    Let's denote t = number of tokens, we have:
-    - t*(`int` + `byte` + `byte` + `long`) + (t / `k`) * `int` = t * (4 + 1 + 1 + 8) + 4 * (t / 100) = (14t + t/25) bytes for the tables.
+    Let's denote `t = number of tokens`, we have:
+    - ![](https://latex.codecogs.com/svg.latex?%5Cinline%20t%5Ccdot%5Cleft%28int&plus;byte&plus;byte&plus;long%5Cright%29&plus;%5Cleft%28%5Cfrac%7Bt%7D%7BK%7D%5Cright%29%5Ccdot%20int%3Dt%5Ccdot%5Cleft%284&plus;1&plus;1&plus;8%5Cright%29&plus;%5Cleft%28%5Cfrac%7Bt%7D%7B100%7D%5Cright%29%5Ccdot4), and overall ![](https://latex.codecogs.com/svg.latex?%5Cinline%2014%5Ccdot%20t&plus;%5Cfrac%7Bt%7D%7B25%7D) `byte`s for the tables.
      
-    Let's denote d = average size of token, s = average size of suffix without mutual prefix, we have:
-    - The concatenated `String` has 36 bytes overhead plus ((t/`K`) * d + (t - t/`K`) * s) * `char` = (36 + ((t/100) * d + (t - t/100) * s) * 2) bytes.
+    Let's denote `d = average size of token`, `s = average size of suffix without mutual prefix`, we have:
+    - The concatenated `String` has `36B` overhead plus ![](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cleft%28%5Cleft%28%5Cfrac%7Bt%7D%7BK%7D%5Cright%29%5Ccdot%20d&plus;%5Cleft%28t-%5Cfrac%7Bt%7D%7BK%7D%5Cright%29%5Ccdot%20s%5Cright%29%5Ccdot%20char), and overall ![](https://latex.codecogs.com/svg.latex?%5Cinline%2036&plus;%5Cleft%28%5Cfrac%7Bt%7D%7B100%7D%5Ccdot%20d&plus;%5Cleft%28t-%5Cfrac%7Bt%7D%7B100%7D%5Cright%29%5Ccdot%20s%5Cright%29%5Ccdot2) `byte`s.
     
     As for the posting list file, it's very hard to give a theoretical analysis in association with the size of memory it will require, 
     because it depends on each the actual numbers we're encoding.
     Overall we can say that we expect the encoded posting list to be much smaller than the actual size that the numbers would take without encoding, 
     due to the fact that we encode gap differences rather than actual numbers, and the fact that group varint doesn't waste bytes for padding or a fixed length for representation.
-    
-    ![formula](https://render.githubusercontent.com/render/math?math=e^{i\pi}=-1)
