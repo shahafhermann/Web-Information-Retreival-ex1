@@ -9,6 +9,9 @@ import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * A parser for a file of reviews.
+ */
 public class ReviewsParser {
 
     private TreeMap<String, TreeMap<Integer, Integer>> tokenDict = new TreeMap<>();
@@ -19,64 +22,84 @@ public class ReviewsParser {
     private ArrayList<String> tokensPerReview = new ArrayList<>();
     private int numOfReviews = 0;
 
+    /**
+     * Return the token dictionary as a tree map
+     */
     TreeMap<String, TreeMap<Integer, Integer>> getTokenDict() {
         return tokenDict;
     }
 
+    /**
+     * Return the product dictionary as a tree map
+     */
     TreeMap<String, TreeMap<Integer, Integer>> getProductDict() { return productDict; }
 
+    /**
+     * Return the review scores as an ArrayList of Strings
+     */
     ArrayList<String> getReviewScore() {
         return reviewScore;
     }
 
+    /**
+     * Return the review helpfulness as an ArrayList of Strings
+     */
     ArrayList<String> getReviewHelpfulness() {
         return reviewHelpfulness;
     }
 
+    /**
+     * Return the review product IDs as an ArrayList of Strings
+     */
     ArrayList<String> getProductId() {
         return productId;
     }
 
+    /**
+     * Return the number of token per review as an ArrayList of Strings
+     */
     ArrayList<String> getTokensPerReview() {
         return tokensPerReview;
     }
 
+    /**
+     * Return the number of reviews
+     */
     int getNumOfReviews() { return numOfReviews;}
 
     /**
-     *
-     * @param termDict
-     * @param token
-     * @param reviewId
+     * Adds a new term to the given dictionary at the correct review
+     * @param termDict The dictionary to add the term to
+     * @param term The term to add
+     * @param reviewId The review to which the term belongs
      */
-    private void addTerm(TreeMap<String, TreeMap<Integer, Integer>> termDict, String token, int reviewId) {
-        if (!termDict.containsKey(token)) {
-            TreeMap<Integer, Integer> tokenData = new TreeMap<>();
-            tokenData.put(reviewId, 1);
-            termDict.put(token, tokenData);
+    private void addTerm(TreeMap<String, TreeMap<Integer, Integer>> termDict, String term, int reviewId) {
+        if (!termDict.containsKey(term)) {
+            TreeMap<Integer, Integer> termData = new TreeMap<>();
+            termData.put(reviewId, 1);
+            termDict.put(term, termData);
         }
         else {
-            TreeMap<Integer, Integer> tokenData = termDict.get(token);
-            Integer lastReview = tokenData.lastKey();
-            Integer lastFrequency = tokenData.get(lastReview);
+            TreeMap<Integer, Integer> termData = termDict.get(term);
+            Integer lastReview = termData.lastKey();
+            Integer lastFrequency = termData.get(lastReview);
             if (lastReview == reviewId) {
-                tokenData.replace(lastReview, lastFrequency + 1);
+                termData.replace(lastReview, lastFrequency + 1);
             }
             else {
-                tokenData.put(reviewId, 1);
+                termData.put(reviewId, 1);
             }
-            termDict.replace(token, tokenData);
+            termDict.replace(term, termData);
         }
     }
 
     /**
      * Break a text to all it's tokens (alphanumeric).
-     * @param text
-     * @param reviewId
+     * @param text The text to break
+     * @param reviewId The review to which the text belongs
      */
     private void breakText(String text, int reviewId) {
         String[] tokens = text.split("[^A-Za-z0-9]+");
-//        tokensPerReview.add(String.valueOf(tokens.length));
         int tokenCounter = 0;
         for (String token: tokens) {
             if (!token.isEmpty()) {
@@ -88,8 +111,8 @@ public class ReviewsParser {
     }
 
     /**
-     *
-     * @param inputFile
+     * Parse the file
+     * @param inputFile The file to parse
      */
     void parseFile(String inputFile) {
         try (BufferedReader reader = new BufferedReader(new FileReader(new File(inputFile)))){

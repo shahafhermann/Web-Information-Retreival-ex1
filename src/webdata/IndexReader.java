@@ -6,9 +6,6 @@ import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.Vector;
 
-/**
- *
- */
 public class IndexReader {
 
     Dictionary tokenDict;
@@ -145,12 +142,6 @@ public class IndexReader {
      * @return The number of tokens in the system (Tokens should be counted as many times as they appear).
      */
     public int getTokenSizeOfReviews() {
-//        int tokenCount = 0;
-//        for (int i = 0; i < tokenDict.getNumOfTerms(); ++i) {
-//            tokenCount += tokenDict.getFrequency(i);
-//        }
-//        return tokenCount;
-
         int tokenCount = 0;
         for (int i = 1; i <= getNumberOfReviews(); ++i) {
             tokenCount += getReviewLength(i);

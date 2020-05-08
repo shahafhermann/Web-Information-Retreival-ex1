@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.TreeMap;
 
+/**
+ * An object representing an index Lexicon
+ */
 public class Dictionary implements Serializable {
 
     private static final int K = 100;
@@ -127,9 +130,8 @@ public class Dictionary implements Serializable {
     }
 
     /**
-     *
-     * @param pos
-     * @return
+     * Get the length of the relevant posting list starting at pos
+     * @param pos Location in file of the relevant posting list
      */
     int readLength(long pos){
         try (RandomAccessFile raf = new RandomAccessFile(path, "rw")){
@@ -143,9 +145,9 @@ public class Dictionary implements Serializable {
     }
 
     /**
-     *
-     * @param pos
-     * @return
+     * Reads the posting list starting at pos
+     * @param pos Location in file of the relevant posting list
+     * @return An Integer array containing the posting list
      */
     public Integer[] read(long pos, long nextPos) {
         try (RandomAccessFile raf = new RandomAccessFile(path, "rw")){
@@ -219,20 +221,20 @@ public class Dictionary implements Serializable {
     }
 
     /**
-     *
-     * @param term
-     * @return
+     * Search for a term in the dictionary
+     * @param term The term to search
+     * @return The position of the term in the concatenated String, or -1 if not found.
      */
     int searchTerm(String term) {
         return binarySearch(0, numOfBlocks - 1, term);
     }
 
     /**
-     *
-     * @param left
-     * @param right
-     * @param term
-     * @return
+     * A binary search for the given term.
+     * @param left Left bound
+     * @param right Right bound
+     * @param term Term to search for
+     * @return The position of the term within the bounds, or -1 of not found.
      */
     private int binarySearch(int left, int right, String term) {
         if (right == left) {
@@ -269,6 +271,12 @@ public class Dictionary implements Serializable {
         return -1;
     }
 
+    /**
+     * Once found the block (of size K) in which the term is found, search linearly for the exact position within.
+     * @param left Left bound
+     * @param term The term to search for
+     * @return The position of the term within the bounds, or -1 of not found.
+     */
     private int rangeSearch(int left, String term) {
         int basePtr = termPtr[left];
         int i = left * K ;
@@ -294,10 +302,16 @@ public class Dictionary implements Serializable {
         return -1;
     }
 
+    /**
+     * Return the frequency of the i'th term
+     */
     int getFrequency(int i) {
         return frequency[i];
     }
 
+    /**
+     * Return the posting list position of the i'th term
+     */
     long getPostingPtr(int i) {
         return postingPtr[i];
     }

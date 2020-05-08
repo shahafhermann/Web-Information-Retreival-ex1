@@ -5,6 +5,9 @@ import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * A static class to encode and decode
+ */
 final class Encoder {
 
     /**
@@ -13,10 +16,11 @@ final class Encoder {
     private Encoder() {}
 
     /**
-     *
-     * @param values
-     * @param codeAsGap
-     * @return
+     * Encode an ArrayList of Integers to an ArrayList of encoded bytes using varint group encoding.
+     * If codeAsGap is true than the bytes should represent a gap difference.
+     * @param values The Integer ArrayList
+     * @param codeAsGap Indicate whether there's a gap difference
+     * @return The encoded Byte ArrayList.
      */
     static ArrayList<Byte> encode(ArrayList<Integer> values, boolean codeAsGap) {
         int size = values.size();
@@ -101,9 +105,9 @@ final class Encoder {
     }
 
     /**
-     * Returns a byte array of exactly 4 bytes.
-     * @param arr Byte array to pad
-     * @return Byte array of size 4
+     * Returns a Byte ArrayList of exactly 4 bytes.
+     * @param arr Byte ArrayList to pad
+     * @return Byte ArrayList of size 4
      */
     private static ArrayList<Byte> padByte(ArrayList<Byte> arr) {
         int pad = 4 - arr.size();
@@ -116,6 +120,11 @@ final class Encoder {
         return arr;
     }
 
+    /**
+     * Returns a byte array of exactly 4 bytes.
+     * @param arr byte array to pad
+     * @return byte array of size 4
+     */
     private static byte[] padByte(byte[] arr) {
         byte[] newArr = new byte[4];
         int pad = 4 - arr.length;
@@ -125,6 +134,11 @@ final class Encoder {
         return newArr;
     }
 
+    /**
+     * Convert the given Integer to it's byte representation
+     * @param i Integer to convert
+     * @return Byte ArrayList of the Integer's representation
+     */
     private static ArrayList<Byte> intToByte(final Integer i) {
         BigInteger bi = BigInteger.valueOf(i);
         ArrayList<Byte> bigByte = new ArrayList<>();
@@ -134,6 +148,11 @@ final class Encoder {
         return bigByte;
     }
 
+    /**
+     * Convert a byte array representing an integer to it's corresponding int
+     * @param intBytes The byte array
+     * @return The corresponding int
+     */
     private static int byteArrayToInt(byte[] intBytes){
         ByteBuffer byteBuffer = ByteBuffer.wrap(intBytes);
         return byteBuffer.getInt();
