@@ -28,8 +28,8 @@ Frequency now represents the number of reviews that refer a given product ID.
     
     The `String` is a concatenation of the product IDs of all reviews in ascending order of review ID, so instead of holding an array of product IDs (`String`s) we only hold one `String` and minimized the memory overhead of `String`s.
     
-    ![image of diagram]
-    (insert image url)
+    ![Image of Diagram]
+    (https://raw.githubusercontent.com/shahafhermann/Web-Information-Retreival-ex1/master/%D7%93%D7%99%D7%90%D7%92%D7%A8%D7%9E%D7%94.jpg?token=AIU6RGCOJS3QDQG5MCKX4PK6X2GFO)
 
 2. When creating an IndexReader, we load into main memory both dictionaries and the review meta-data, but keep storing the posting lists for both dictionaries on disk.
 
