@@ -110,7 +110,9 @@ class ReviewData implements Serializable {
     /**
      * Return review i's productID
      */
-    String getReviewProductId(int i) { return productId.substring(i, i + productIdLen); }
+    String getReviewProductId(int i) {
+        return productId.substring(i * productIdLen, (i * productIdLen) + productIdLen);
+    }
 
     /**
      * Return the number of tokens in review i

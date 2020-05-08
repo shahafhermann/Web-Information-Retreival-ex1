@@ -21,7 +21,18 @@ public class SlowIndexWriter{
      *            created.
      */
     public void slowWrite(String inputFile, String dir) {
-        removeIndex(dir);
+        File dirFile = new File(dir);
+        if (dirFile.exists()) {
+            removeFiles(dir);
+        } else {  // Create it
+            try{
+                dirFile.mkdir();
+            }
+            catch(SecurityException e){
+                System.err.println(e.getMessage());
+                System.exit(1);
+            }
+        }
 
         ReviewsParser parser = new ReviewsParser();
         parser.parseFile(inputFile);
@@ -56,15 +67,55 @@ public class SlowIndexWriter{
      * @param dir The directory to remove the index from.
      */
     public void removeIndex(String dir) {
-        File tokenDictFile = new File(dir + File.separator + tokenDictFileName);
-        tokenDictFile.delete();
-        File productDictFile = new File(dir + File.separator + productDictFileName);
-        productDictFile.delete();
-        File reviewDataFile = new File(dir + File.separator + reviewDataFileName);
-        reviewDataFile.delete();
-        File productPostingListFile = new File(dir + File.separator + productPostingListFileName);
-        productPostingListFile.delete();
-        File tokenPostingListFile = new File(dir + File.separator + tokenPostingListFileName);
-        tokenPostingListFile.delete();
+        File dirFile = new File(dir);
+        if (dirFile.exists()) {
+            String[] entries = dirFile.list();
+            if (entries != null) {
+                for(String s: entries){
+                    File currentFile = new File(dirFile, s);
+                    currentFile.delete();
+                }
+            }
+            dirFile.delete();
+        }
+    }
+
+    /**
+     * Delete all index files (and only the files).
+     * @param dir The directory to remove the index from.
+     */
+    private void removeFiles(String dir) {
+//        File tokenDictFile = new File(dir + File.separator + tokenDictFileName);
+//        tokenDictFile.delete();
+        deleteFile(dir, tokenDictFileName);
+
+//        File productDictFile = new File(dir + File.separator + productDictFileName);
+//        productDictFile.delete();
+        deleteFile(dir, productDictFileName);
+
+//        File reviewDataFile = new File(dir + File.separator + reviewDataFileName);
+//        reviewDataFile.delete();
+        deleteFile(dir, reviewDataFileName);
+
+//        File productPostingListFile = new File(dir + File.separator + productPostingListFileName);
+//        productPostingListFile.delete();
+        deleteFile(dir, productPostingListFileName);
+
+
+//        File tokenPostingListFile = new File(dir + File.separator + tokenPostingListFileName);
+//        tokenPostingListFile.delete();
+        deleteFile(dir, tokenPostingListFileName);
+    }
+
+    /**
+     * Delete a single file
+     * @param dir The directory to delete from
+     * @param fileName The file name
+     */
+    private void deleteFile(String dir, String fileName) {
+        File f = new File(dir + File.separator + fileName);
+        if (f.exists()) {
+            f.delete();
+        }
     }
 }
