@@ -3,25 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e338cb8c-2952-43c2-9000-930fb87f6979" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/indexFiles/productDict" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/indexFiles/productPostingList" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/indexFiles/reviewData" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/indexFiles/tokenDict" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/indexFiles/tokenPostingList" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ex1/webdata/Dictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ex1/webdata/Dictionary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ex1/webdata/Encoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ex1/webdata/Encoder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ex1/webdata/IndexReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ex1/webdata/IndexReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ex1/webdata/ReviewData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ex1/webdata/ReviewData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ex1/webdata/ReviewsParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ex1/webdata/ReviewsParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ex1/webdata/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ex1/webdata/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productDict" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/productPostingList" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reviewData" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webdata/ReviewData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webdata/ReviewData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webdata/SlowIndexWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webdata/SlowIndexWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webdata/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webdata/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tokenDict" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tokenPostingList" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ex1/webdata/SlowIndexWriter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ex1/webdata/SlowIndexWriter.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/webdata/SlowIndexWriter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+            <state relative-caret-position="482">
+              <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -48,19 +31,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/io/File.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="1319" column="19" selection-start-line="1319" selection-start-column="19" selection-end-line="1319" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/webdata/Dictionary.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="312" column="56" selection-start-line="312" selection-start-column="56" selection-end-line="312" selection-end-column="56" />
+            <state relative-caret-position="301">
+              <caret line="37" column="53" selection-start-line="37" selection-start-column="53" selection-end-line="37" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -76,6 +50,30 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/webdata/IndexReaderTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="182" column="23" lean-forward="true" selection-start-line="182" selection-start-column="23" selection-end-line="182" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="180">
+                <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -117,6 +115,7 @@
       <find>getProductId</find>
       <find>concat</find>
       <find>read</find>
+      <find>writeObject</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -130,7 +129,6 @@
         <option value="$PROJECT_DIR$/src/webdata/Parser.java" />
         <option value="$PROJECT_DIR$/src/webdata/Index.java" />
         <option value="$PROJECT_DIR$/src/webdata/TableOfContents.java" />
-        <option value="$PROJECT_DIR$/src/webdata/IndexReaderTest.java" />
         <option value="$PROJECT_DIR$/src/webdata/ReviewsParser.java" />
         <option value="$PROJECT_DIR$/src/webdata/Encoder.java" />
         <option value="$PROJECT_DIR$/src/webdata/IndexReader.java" />
@@ -139,6 +137,8 @@
         <option value="$PROJECT_DIR$/src/webdata/ReviewData.java" />
         <option value="$PROJECT_DIR$/src/webdata/main.java" />
         <option value="$PROJECT_DIR$/src/webdata/SlowIndexWriter.java" />
+        <option value="$PROJECT_DIR$/src/webdata/IndexReaderTest.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -185,7 +185,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588934585828" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588937215860" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -201,7 +201,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.main">
+  <component name="RunManager" selected="JUnit.IndexReaderTest">
     <configuration name="SlowIndexWriter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="webdata.SlowIndexWriter" />
       <module name="ex1" />
@@ -276,8 +276,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.main" />
         <item itemvalue="JUnit.IndexReaderTest" />
+        <item itemvalue="Application.main" />
         <item itemvalue="JUnit.IndexReaderTest.getTokenSizeOfReviews" />
         <item itemvalue="JUnit.IndexReaderTest.getProductId" />
         <item itemvalue="Application.SlowIndexWriter" />
@@ -317,17 +317,11 @@
       <workItem from="1588230246311" duration="271000" />
       <workItem from="1588316459225" duration="11351000" />
       <workItem from="1588928325678" duration="4000" />
-      <workItem from="1588928332506" duration="6006000" />
+      <workItem from="1588928332506" duration="7465000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="IndexReaderTest_getProductId - 2020.05.01 at 11h 21m 44s.xml">
-      <configuration name="IndexReaderTest.getProductId" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="IndexReaderTest - 2020.05.01 at 11h 22m 11s.xml">
-      <configuration name="IndexReaderTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="IndexReaderTest_getTokenSizeOfReviews - 2020.05.01 at 11h 22m 33s.xml">
       <configuration name="IndexReaderTest.getTokenSizeOfReviews" configurationId="JUnit" />
     </history-entry>
@@ -352,9 +346,15 @@
     <history-entry file="IndexReaderTest - 2020.05.01 at 13h 19m 50s.xml">
       <configuration name="IndexReaderTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="IndexReaderTest - 2020.05.08 at 13h 44m 33s.xml">
+      <configuration name="IndexReaderTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IndexReaderTest - 2020.05.08 at 13h 45m 02s.xml">
+      <configuration name="IndexReaderTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114165000" />
+    <option name="totallyTimeSpent" value="115624000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -369,7 +369,7 @@
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979592" visible="true" weight="0.17460318" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4979592" visible="true" weight="0.17460318" />
       <window_info id="Structure" order="1" sideWeight="0.5020408" side_tool="true" weight="0.17094018" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -451,13 +451,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/io/ObjectOutputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="342" column="14" lean-forward="true" selection-start-line="342" selection-start-column="14" selection-end-line="342" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/webdata/Dast.java" />
     <entry file="file://$PROJECT_DIR$/../../OOP/ex3/src/StringList.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -564,26 +557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/webdata/Dictionary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="312" column="56" selection-start-line="312" selection-start-column="56" selection-end-line="312" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/webdata/IndexReaderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="35" column="49" lean-forward="true" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/webdata/ReviewData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -614,6 +587,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/io/File.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="1319" column="19" selection-start-line="1319" selection-start-column="19" selection-end-line="1319" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/webdata/Dictionary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="37" column="53" selection-start-line="37" selection-start-column="53" selection-end-line="37" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/io/ObjectOutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="1105" column="17" selection-start-line="1105" selection-start-column="17" selection-end-line="1105" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/webdata/SlowIndexWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/webdata/main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -624,20 +631,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/io/File.java">
+    <entry file="file://$PROJECT_DIR$/src/webdata/IndexReaderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="1319" column="19" selection-start-line="1319" selection-start-column="19" selection-end-line="1319" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/webdata/SlowIndexWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+        <state relative-caret-position="663">
+          <caret line="182" column="23" lean-forward="true" selection-start-line="182" selection-start-column="23" selection-end-line="182" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="180">
+            <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
