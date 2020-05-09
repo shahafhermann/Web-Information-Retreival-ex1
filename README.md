@@ -44,6 +44,18 @@ Frequency now represents the number of reviews that refer a given product ID.
     - The concatenated `String` has `36B` overhead plus ![](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cleft%28%5Cleft%28%5Cfrac%7Bt%7D%7BK%7D%5Cright%29%5Ccdot%20d&plus;%5Cleft%28t-%5Cfrac%7Bt%7D%7BK%7D%5Cright%29%5Ccdot%20s%5Cright%29%5Ccdot%20char), and overall ![](https://latex.codecogs.com/svg.latex?%5Cinline%2036&plus;%5Cleft%28%5Cfrac%7Bt%7D%7B100%7D%5Ccdot%20d&plus;%5Cleft%28t-%5Cfrac%7Bt%7D%7B100%7D%5Cright%29%5Ccdot%20s%5Cright%29%5Ccdot2) `byte`s.
     
     As for the posting list file, it's very hard to give a theoretical analysis in association with the size of memory it will require, 
-    because it depends on each the actual numbers we're encoding.
-    Overall we can say that we expect the encoded posting list to be much smaller than the actual size that the numbers would take without encoding, 
-    due to the fact that we encode gap differences rather than actual numbers, and the fact that group varint doesn't waste bytes for padding or a fixed length for representation.
+    because it depends on each of the actual numbers we're encoding.
+    Trying to be more precise, diving into the implementation of group varint encoding, the expected size of
+    one posting list of one token in the token dictionary will be as follows:
+    Let's denote M = number of groups to encode using group varint (it is the number of reviews that a given token appears in).
+    Let's denote variables x, y, z, w = number of groups out of M that represent a number that takes 1, 2, 3, 4 bytes respectively.
+    We get that the size of one posting list is: 
+    - 4 bytes for writing the number M
+    - M/4 control bytes (each takes 1 byte)
+    - (1*x + 2*y + 3*z + 4*w) bytes (for the actual encoded numbers)
+    Now, for each token in the token dictionary we hold 2 posting lists successively, one for encoding the gap 
+    difference of each of the reviews the token appears in, and one for their matching frequencies.
+    for each product ID in the product dictionary we hold just one posting list, the one of the gap differences.
+    
+    Overall we can say that we expect the encoded posting lists to be much smaller than the actual size that the numbers would take without encoding, 
+    due to the fact that we encode gap differences rather than actual numbers, and the fact that group varint doesn't waste bytes of padding for a fixed length, for representation.
