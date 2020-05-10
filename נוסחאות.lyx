@@ -126,5 +126,276 @@
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula 
+\[
+n\cdot\left(short+short+short+byte\right)=7n
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+n
+\backslash
+cdot
+\backslash
+left(short+short+short+byte
+\backslash
+right)=7n
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+10\cdot n
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+10
+\backslash
+cdot n
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+10\cdot n\cdot sizeOf\left(char\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+10
+\backslash
+cdot n
+\backslash
+cdot sizeOf
+\backslash
+left(char
+\backslash
+right)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sim(36+20\cdot n)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\backslash
+sim(36+20
+\backslash
+cdot n)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+t\cdot\left(int+byte+byte+long\right)+\left(\frac{t}{K}\right)\cdot int=t\cdot\left(4+1+1+8\right)+\left(\frac{t}{100}\right)\cdot4
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+14\cdot t+\frac{t}{25}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+14
+\backslash
+cdot t+
+\backslash
+frac{t}{25}
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\frac{t}{K}\cdot d+\left(t-\frac{t}{K}\right)\cdot s\right)\cdot char
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\backslash
+left(
+\backslash
+left(
+\backslash
+frac{t}{K}
+\backslash
+right)
+\backslash
+cdot d+
+\backslash
+left(t-
+\backslash
+frac{t}{K}
+\backslash
+right)
+\backslash
+cdot s
+\backslash
+right)
+\backslash
+cdot char
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+36+\left(\frac{t}{100}\cdot d+\left(t-\frac{t}{100}\right)\cdot s\right)\cdot2
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+36+
+\backslash
+left(
+\backslash
+frac{t}{100}
+\backslash
+cdot d+
+\backslash
+left(t-
+\backslash
+frac{t}{100}
+\backslash
+right)
+\backslash
+cdot s
+\backslash
+right)
+\backslash
+cdot2
+\end_layout
+
 \end_body
 \end_document

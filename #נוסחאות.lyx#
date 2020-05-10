@@ -397,5 +397,71 @@ right)
 cdot2
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{M}{4}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\backslash
+frac{M}{4}
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+1\cdot x+2\cdot y+3\cdot z+4\cdot w
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1
+\backslash
+cdot x+2
+\backslash
+cdot y+3
+\backslash
+cdot z+4
+\backslash
+cdot w
+\end_layout
+
 \end_body
 \end_document
