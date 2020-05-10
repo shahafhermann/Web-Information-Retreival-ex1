@@ -47,12 +47,13 @@ Frequency now represents the number of reviews that refer a given product ID.
     because it depends on each of the actual numbers we're encoding.
     Trying to be more precise, diving into the implementation of group varint encoding, the expected size of
     one posting list of one token in the token dictionary will be as follows:
-    Let's denote M = number of groups to encode using group varint (it is the number of reviews that a given token appears in).
+    Let's denote `M = number of groups to encode` using group varint (it is the number of reviews that a given token appears in).
     Let's denote variables x, y, z, w = number of groups out of M that represent a number that takes 1, 2, 3, 4 bytes respectively.
     We get that the size of one posting list is: 
     - 4 bytes for writing the number M
-    - M/4 control bytes (each takes 1 byte)
-    - (1*x + 2*y + 3*z + 4*w) bytes (for the actual encoded numbers)
+    - ![](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cfrac%7BM%7D%7B4%7D) control bytes (each takes 1 `byte`)
+    - ![](https://latex.codecogs.com/svg.latex?%5Cinline%201%5Ccdot%20x&plus;2%5Ccdot%20y&plus;3%5Ccdot%20z&plus;4%5Ccdot%20w) `byte`s (for the actual encoded numbers)
+
     Now, for each token in the token dictionary we hold 2 posting lists successively, one for encoding the gap 
     difference of each of the reviews the token appears in, and one for their matching frequencies.
     for each product ID in the product dictionary we hold just one posting list, the one of the gap differences.
