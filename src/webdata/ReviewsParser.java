@@ -156,7 +156,7 @@ public class ReviewsParser {
                     continue;
                 }
 
-                term = Pattern.compile("^review/text: (.*)").matcher(line);
+                term = Pattern.compile("^review/text:(.*)").matcher(line);
                 if (term.find()) {
                     textFlag = true;
                     textBuffer = term.group(1);

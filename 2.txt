@@ -1,0 +1,68 @@
+product/productId: B001E4KFG0
+review/userId: A3SGXH7AUHU8GW
+review/profileName: delmartian
+d
+d
+d
+
+d
+
+d
+
+
+review/helpfulness: 1/1
+review/score: 5.0
+review/time: 1303862400
+review/summary: Good Quality Dog Food
+review/text: a b c d e f g
+
+k
+
+r
+
+product/productId: B00813GRG4
+review/userId: A1D87F6ZCVE5NK
+review/profileName: dll pa
+review/helpfulness: 670/990
+review/score: 1.0
+review/time: 1346976000
+review/summary: Not as Advertised
+review/text:  
+
+product/productId: B000LQOCH0
+review/userId: ABXLMWJIXXAIN
+review/profileName: Natalia Corres "Natalia Corres"
+review/helpfulness: 1/1
+review/score: 4.0
+review/time: 1219017600
+review/summary: "Delight" says it all
+review/text: h i j k l m n
+
+
+o
+
+p
+
+product/productId: B000LDOCH0
+review/userId: ABXLMWJIXXAIN
+review/profileName: Natalia Corres "Natalia Corres"
+review/helpfulness: 1/1
+review/score: 4.0
+review/time: 1219017600
+review/summary: "Delight" says it all
+review/text:
+q r
+
+s
+t
+u v w x y z
+
+
+product/productId: B000LQOCT0
+review/userId: ABXLMWJIXXAINDE
+review/profileName: Natalia Cosdsddrres "Natalia Corres"
+review/helpfulness: 300/550
+review/score: 3.0
+review/time: 1219017600
+review/summary: "Delight" says it all
+review/text:
