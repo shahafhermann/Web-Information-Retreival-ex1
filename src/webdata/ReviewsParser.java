@@ -126,7 +126,6 @@ public class ReviewsParser {
                     textBuffer = textBuffer.concat(" ").concat(line);
                     line = reader.readLine();
                     continue;
-
                 }
 
                 term = Pattern.compile("^product/productId: (.*)").matcher(line);
